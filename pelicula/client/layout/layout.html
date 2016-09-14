@@ -1,0 +1,111 @@
+
+<template name= "baseLayout">
+	<head>
+  		<title>Club de la pelicula </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+		<script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script> 
+		<script src="../js/jquery.openCarousel.js" type="text/javascript"></script>
+		<script type="text/javascript" src="../js/easing.js"></script>
+		<script type="text/javascript" src="../js/move-top.js"></script>
+	</head>
+
+	<body>
+
+ 		{{> header}}
+  		<a href="#" id="toTop"> </a>
+    	<script type="text/javascript" src="../js/navigation.js"></script>
+	
+ 		{{>yield}}
+    {{>footer}}
+    <script type="text/javascript">
+    $(document).ready(function() {      
+      $().UItoTop({ easingType: 'easeOutQuart' });
+      
+    });
+  </script>
+ 	</body>
+</template>
+
+<template name="header">
+  <div class="header">
+     <div class="wrap">
+        <div class="header_top">
+          	<div class="logo">
+            	<a href="{{pathFor 'home'}}"><img src="images/logo9.png" alt="" /></a>
+          	</div>
+            <div class="header_top_right">
+                <div class="search_box">
+                  	<span>Search</span>
+                  		<form>
+                    		<input type="text" value=""><input type="submit" value="">
+                  		</form>
+                 	 <div class="clear"></div>
+                </div>
+         	</div>
+          	<div class="clear"></div>
+        </div>     
+         <div class="navigation">
+            <a class="toggleMenu" href="#">Menu</a>
+            <div class="prenav">
+          	<ul class="nav">
+           			<li>
+              		<a href="{{pathFor 'home'}}">Inicio</a>
+            		</li>
+            		<li>
+              		<a href="#">Películas</a>
+            		</li>
+           			<li>
+             			<a href="#">Próximos estrenos</a>
+            		</li>
+           			<li>
+              		<a href="#">Series</a>
+            		</li>
+            		<li>
+              		<a href="#">Trailers</a>
+            		</li>
+            		<li>
+             			<a href="#">Estrenos</a>
+           			</li>
+           			<li>
+              		<a href="#">Regístrate</a>
+           			</li>
+           			<li>
+             			<a href="{{pathFor 'contact'}}">Contáctenos</a>
+            		</li>
+         		</ul>
+            </div>
+
+            <div class="ribbons">
+              <div class="left-ribbon"> </div> 
+              <div class="right-ribbon"> </div>
+            </div>
+             
+              
+          </div>
+
+     </div>
+   </div>
+
+</template>
+
+<template name= "footer">
+
+       <div class="footer">
+      <div class="wrap">  
+       <div class="copy_right">
+        <p>Copy rights (c). Todos los derechos reservados | </p>
+       </div> 
+       <div class="footer-nav">
+        <ul>
+          <li><a href="#">Términos de uso </a> : </li>
+          <li><a href="#">Política de privacidad </a> : </li>
+          <li><a href="contact.html">Contacta con nosotros </a>  </li>
+        </ul>
+       </div> 
+        </div>
+    </div>
+
+</template>
