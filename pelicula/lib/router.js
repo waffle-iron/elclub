@@ -70,3 +70,16 @@ Router.route('/products/:id', function () {
 });
 
 //*/
+
+Router.route('/preview/:id', function() {
+
+	var that = this;
+	var pelicula = _.find(Peliculas1, function(prod){
+		return (prod.id === that.params.id);
+		});
+
+	this.render('productDetail',{
+		data: pelicula
+	});
+
+});
