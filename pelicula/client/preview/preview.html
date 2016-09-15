@@ -1,4 +1,3 @@
-
 <head>
 <title>Club de la Película </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,162 +25,90 @@
 				});
 
 			});
-		</script>
-	  <script src="js/star-rating.js" type="text/javascript"></script>
+</script>
+	  <script src="../js/star-rating.js" type="text/javascript"></script>
 </head>
-<template name = "preview">
-<body>
+
+<template name = "productDetail">
    <div class="main">
    	 <div class="wrap">
    	 	<div class="preview-page">
-   	 	       <div class="section group">
+   	 	     <div class="section group">
 				<div class="cont-desc span_1_of_2">
 					<ul class="back-links">
-						<li><a href="index.html">Home</a> ::</li>
+						<li><a href="{{pathFor 'home'}}">Home</a> ::</li>
 						<li><a href="#">Detalles </a> ::</li>
-						<li>Misión: Imposible - Nación Secreta</li>
+						<li>{{title}}</li>
 						<div class="clear"> </div>
 					</ul>
-				  <div class="product-details">	
-					<div class="grid images_3_of_2">
+				  	<div class="product-details">	
+						<div class="grid images_3_of_2">
 							<li>
-								<a href="#"> <img class="etalage_thumb_image" src=" images/ultimas-peliculas-img1.jpg" /> </a>
+								<a href="#"> <img class="etalage_thumb_image" src=" images/{{image}}" /> </a>
 							</li>
-				     </div>
-				   <div class="desc span_3_of_2">
-					<h2>  Misión: Imposible - Nación Secreta </h2>
-					<p>Con el FMI se disolvió, Ethan y su equipo se unen con un agente británico repudiado , que puede o no puede ser un miembro de esta nación, ya que deben enfrentar a una nueva red de agentes especiales altamente cualificados , el Sindicato .</p>					
-					<div class="price">
-						<p>Precio: <span>$839.93</span></p>
-					</div>
-					<div class="available">
-						<ul>
-						  <li><span>Protagonizada:</span> &nbsp; Tom Cruise, Jeremy Renner</li>
-						  <li><span>Duración:</span>&nbsp; 131 min. </li>
-						  <li><span>Género: </span>&nbsp; Acción </li>
-					    </ul>
-					</div>
-				<div class="share-desc">
-					<div class="button"><span><a href="#">Comprar</a></span></div>					
-					<div class="clear"></div>
-				</div>
-				 <div class="wish-list">
-				 	<ul>
-				 		<li class="wish"><a href="#">Agregar al carrito </a></li>
-				 	    <li class="compare"><a href="#">Agregar para comparar </a></li>
-				 	</ul>
-				 </div>
-				 <div class="colors-share">
-				 	<div class="social-share">
-				 		<h4> Compartir </h4>
-				 			  <ul>
-									<li><a class="share-face" href="#"> </a></li>
-									<li><a class="share-twitter" href="#"> </a></li>
-									<li><a class="share-google" href="#"> </a></li>
-									<li><a class="share-rss" href="#"> </a></li>
-									<div class="clear"> </div>
-						    </ul>
-				 	</div>
-				 	<div class="clear"></div>
-				 </div>
-			</div>
-			<div class="clear"></div>
-		  </div>
-		<div class="product_desc">	
-			<div id="horizontalTab">
-
-				{{>tabs}}
-				
-		    </div>
-	    </div>
-      </div>
-				   <div class="rightsidebar span_3_of_1 sidebar">
+				    	 </div>
+				   		<div class="desc span_3_of_2">
+							<h2>  {{title}} </h2>
+							<p>{{descrip}}</p>					
+							<div class="price">
+								<p>Precio: <span>{{price}}</span></p>
+							</div>
+							<div class="available">
+								<ul>
+								  <li><span>Protagonizada:</span> &nbsp; {{prota}}</li>
+								  <li><span>Duración:</span>&nbsp; {{dura}} </li>
+								  <li><span>Género: </span>&nbsp; {{genero}} </li>
+					    		</ul>
+							</div>
+							<div class="share-desc">
+								<div class="button"><span><a href="#">Comprar</a></span></div>					
+								<div class="clear"></div>
+							</div>
+							 <div class="wish-list">
+							 	<ul>
+							 		<li class="wish"><a href="#">Agregar al carrito </a></li>
+							 	    <li class="compare"><a href="#">Agregar a favoritos </a></li>
+							 	</ul>
+							 </div>
+							 <div class="colors-share">
+							 	<div class="social-share">
+							 		<h4> Compartir </h4>
+							 			  <ul>
+												<li><a class="share-face" href="#"> </a></li>
+												<li><a class="share-twitter" href="#"> </a></li>
+												<li><a class="share-google" href="#"> </a></li>
+												<li><a class="share-rss" href="#"> </a></li>
+												<div class="clear"> </div>
+									    </ul>
+							 	</div>
+				 				<div class="clear"></div>
+							 </div>
+						</div>
+							<div class="clear"></div>
+		  			</div>
+					<div class="product_desc">	
+						<div id="horizontalTab">
+							{{>tabs}}
+					    </div>
+	   				 </div>
+      			</div>
+				<div class="rightsidebar span_3_of_1 sidebar">
 					<h3>Películas Populares</h3>
-					<ul class="popular-products">
-						<li>
-							 <h4><a href="preview.html">Tarzan </a></h4>
-							  <a href="preview.html"><img src="images/product-img2.jpg" alt="" /></a>
-							  <div class="price-details">
-						       <div class="price-number">
-									<p><span class="rupees line-through">$899.95 </span> &nbsp; <span class="rupees">$839.93 </span></p>
-							    </div>
-							       		<div class="add-cart">								
-											<h4><a href="preview.html">Mas detalles</a></h4>
-									     </div>
-									 <div class="clear"></div>
-							</div>					 
-						</li>
-						<li>
-							 <h4><a href="preview.html">The matrix </a></h4>
-							  <a href="preview.html"><img src="images/product-img3.jpg" alt="" /></a>
-							  <div class="price-details">
-						       <div class="price-number">
-									<p><span class="rupees line-through">$899.95 </span> &nbsp; <span class="rupees">$839.93 </span></p>
-							    </div>
-							       		<div class="add-cart">								
-											<h4><a href="preview.html">Mas detalles</a></h4>
-									     </div>
-									 <div class="clear"></div>
-							</div>					 
-						</li>
-						<li>
-							 <h4><a href="preview.html">Si decido quedarme </a></h4>
-							  <a href="preview.html"><img src="images/product-img4.jpg" alt="" /></a>
-							  <div class="price-details">
-						       <div class="price-number">
-									<p><span class="rupees line-through">$899.95 </span> &nbsp; <span class="rupees">$839.93 </span></p>
-							    </div>
-							       		<div class="add-cart">								
-											<h4><a href="preview.html">Mas detalles</a></h4>
-									     </div>
-									 <div class="clear"></div>
-							</div>					 
-						</li>
-				     </ul>
-				    
-      				   <div class="community-poll">
-      				 	<h3>Encuesta</h3>
-      				 	<p>Cual es la principal razón de comprar películas online?</p>
-      				 	<div class="poll">
-      				 		<form>
-      				 			<ul>
-									<li>
-									<input type="radio" name="vote" class="radio" value="1">
-									<span class="label"><label>El envío y la entrega son más conveniente </label></span>
-									</li>
-									<li>
-									<input type="radio" name="vote" class="radio" value="2">
-									<span class="label"><label for="vote_2"> Precios mas bajos</label></span>
-									</li>
-									<li>
-									<input type="radio" name="vote" class="radio" value="3">
-									<span class="label"><label for="vote_3">La elección más grande</label></span>
-									</li>
-									<li>
-									<input type="radio" name="vote" class="radio" value="5">
-									<span class="label"><label for="vote_5">Ofrece seguridad en los pagos </label></span>
-									</li>
-									<li>
-									<input type="radio" name="vote" class="radio" value="7">
-									<span class="label"><label for="vote_7">Otras.</label></span>
-									</li>
-									</ul>
-      				 		</form>
-      				 	</div>
-      				 </div>
-					</div>
- 		 		   </div>
- 		 		</div>
-   	 		</div>
-   	 		<div class="content_top">
-    	        	<div class="wrap">
-		          	   <h3>Lo mas vendido</h3>
-		          	</div>
-		          	<div class="line"> </div>
-		          	<div class="wrap">
-		          	 <div class="ocarousel_slider">  
-	      				<div class="ocarousel example_photos" data-ocarousel-perscroll="3">
-			                <div class="ocarousel_window">
+						{{>MasP}}
+						{{>Encuesta}}
+				</div>
+ 		 	</div>
+ 		</div>
+   	</div>
+   <div class="content_top">
+    	<div class="wrap">
+		    <h3>Lo mas vendido</h3>
+		</div>
+		<div class="line"> </div>
+		    <div class="wrap">
+		        <div class="ocarousel_slider">  
+	      			<div class="ocarousel example_photos" data-ocarousel-perscroll="3">
+			            <div class="ocarousel_window">
 			                   <a href="#" title="img1"> <img src="images/product-img1.jpg" alt="" /><p>Tortugas Ninja</p></a>
 			                   <a href="#" title="img2"> <img src="images/product-img2.jpg" alt="" /><p>Tarzan</p></a>
 			                   <a href="#" title="img3"> <img src="images/product-img3.jpg" alt="" /><p>The Matrix</p></a>
@@ -194,28 +121,25 @@
 			                   <a href="#" title="img4"> <img src="images/product-img10.jpg" alt="" /><p>Buscando a Dory</p></a>
 			                   <a href="#" title="img5"> <img src="images/product-img11.jpg" alt="" /><p>Stars War</p></a>
 			                   <a href="#" title="img6"> <img src="images/product-img12.jpg" alt="" /><p>Zootopia</p></a>
-			                </div>
+			            </div>
 			               <span>           
 			                <a href="#" data-ocarousel-link="left" style="float: left;" class="prev"> </a>
 			                <a href="#" data-ocarousel-link="right" style="float: right;" class="next"> </a>
 			               </span>
-					   </div>
-				     </div>  
-				   </div>    		
-    	       </div>
-        </div>
+					</div>
+				</div>  
+			</div>    		
+    </div>
+</div>
    
    <script type="text/javascript">
 		$(document).ready(function() {			
 			$().UItoTop({ easingType: 'easeOutQuart' });
 			
 		});
-	</script>
+</script>
     <a href="#" id="toTop"> </a>
-       <script type="text/javascript" src="js/navigation.js"></script>
-</body>
-	
-
+  <script type="text/javascript" src="js/navigation.js"></script>
 </template>
 
 <template name="specs">
@@ -224,9 +148,7 @@
 		{{#each specification}}
 			<li>
 				<span class="specification-heading">{{nombre}} </span>
-					<span>
-					{{valor}}
-					</span>
+					<span>{{valor}}</span>
 				<div class="clear"></div>
 			</li>
 		{{/each}}
@@ -305,4 +227,57 @@
 
 	</div>	
 
+</template>
+
+<template name = "MasP">
+	<ul class="popular-products">
+		{{#each Masp1}}
+			<li>
+				<h4><a href="preview/{{id}}">{{title}} </a></h4>
+				<a href="preview/{{id}}"><img src="images/{{image}}" alt="" /></a>
+				<div class="price-details">
+					<div class="price-number">
+					<p><span class="rupees line-through">{{price}} </span> &nbsp; <span class="rupees">{{descuento}} </span></p>
+					</div>
+					<div class="add-cart">								
+						<h4><a href="preview/{{id}}">Mas detalles</a></h4>
+					</div>
+					 <div class="clear"></div>
+				</div>					 
+			</li>	
+		{{/each}}
+	</ul>
+</template>
+
+<template name = "Encuesta">
+	 <div class="community-poll">
+	     <h3>Encuesta</h3>
+	     <p>Cual es la principal razón de comprar películas online?</p>
+	     <div class="poll">
+      		<form>
+      			<ul>
+					<li>
+						<input type="radio" name="vote" class="radio" value="1">
+						<span class="label"><label>El envío y la entrega son más conveniente </label></span>
+					</li>
+					<li>
+						<input type="radio" name="vote" class="radio" value="2">
+						<span class="label"><label for="vote_2"> Precios mas bajos</label></span>
+					</li>
+					<li>
+						<input type="radio" name="vote" class="radio" value="3">
+						<span class="label"><label for="vote_3">La elección más grande</label></span>
+					</li>
+					<li>
+						<input type="radio" name="vote" class="radio" value="5">
+						<span class="label"><label for="vote_5">Ofrece seguridad en los pagos </label></span>
+					</li>
+					<li>
+						<input type="radio" name="vote" class="radio" value="7">
+						<span class="label"><label for="vote_7">Otras.</label></span>
+					</li>
+				</ul>
+      		</form>
+      	</div>
+    </div>
 </template>
