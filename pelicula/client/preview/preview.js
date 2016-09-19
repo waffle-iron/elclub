@@ -102,8 +102,7 @@ MasPopulares =
 ];
 
 Template.masPopulares.helpers({
-	
-	masPopulares: function() {
+	peliculasMasPopulares: function() {
 		return MasPopulares.sort( function(a,b){
 			return a.popularity - b.popularity;
 		}).slice(0,3);
