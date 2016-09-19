@@ -548,32 +548,31 @@ div.right-ribbon{
 	margin: 1% 0 1% 1.6%;
 }
 .grid_1_of_4:first-child {
-	margin-left: 0;
 }
-.images_1_of_4 {
-	width:20.72%;
+.movie_block {
+	width:180px;
 	padding:1.5%; 
 	text-align: center;
 	position: relative;
 	background:#FFF;
 }
-.images_1_of_4  a{
+.movie_block  a{
 	display:block;
 }
-.images_1_of_4  img {
+.movie_block  img {
 	max-width: 100%;
 }
-.images_1_of_4  h4  a{
+.movie_block  h4  a{
 	color:#e44f2b;
 	font-size:16px;
 	padding-bottom:5px;
 }
-.images_1_of_4  p {
+.movie_block  p {
 	font-size:22px;
 	padding: 0.4em 0;
 	color: #333;
 }
-.images_1_of_4  p span.price {
+.movie_block  p span.price {
 	font-size: 18px;
 	color:#CC3636;
 }
@@ -1510,7 +1509,7 @@ div.right-ribbon{
     .ocarousel_window_slides a{
     	padding:0 20px;
     }
-    .images_1_of_4{
+    .movie_block{
     	width:44.72%;
     }
     .copy_right,.footer-nav{

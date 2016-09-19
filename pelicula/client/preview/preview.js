@@ -68,41 +68,6 @@ Template.tabs.events({
 	}
 })
 
-Peliculas1 =  [
-
-{
-	id: '1',
-	title: 'Civil War',
-	price: '8523',
-	image: 'product-img5.jpg',
-	prota: 'Tom Cruise, Jeremy Renner',
-	dura: '131 min.',
-	genero: 'Acción',
-	descrip: 'Cuando un incidente relacionado con los resultados Vengadores en daños colaterales, aumenta la presión política responsabilizar al equipo. La batalla resultante crea una separación entre el Capitán América y Iron Man, y enfrenta a los Vengadores uno contra el otro.'
-},
-{
-	id: '2',
-	title: 'Transformers',
-	image: 'product-img6.jpg',
-	price: 'Bolivares',	
-},
-
-{
-	id:'3',
-	title: 'The Matrix',
-	image: 'product-img3.jpg',
-	price:'$839.93'
-},
-
-{
-	id:'4',
-	title: 'Si decido quedarme',
-	image: 'product-img4.jpg',
-	price:'$839.93',
-},
-
-];
-
 Template.productDetail.helpers({
 	
 	specification: function() {
@@ -136,9 +101,11 @@ MasPopulares =
 }
 ];
 
-Template.MasP.helpers({
+Template.masPopulares.helpers({
 	
-	Masp1: function() {
-		return MasPopulares;
+	masPopulares: function() {
+		return MasPopulares.sort( function(a,b){
+			return a.popularity - b.popularity;
+		}).slice(0,3);
 	}
 })

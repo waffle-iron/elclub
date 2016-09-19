@@ -1,19 +1,5 @@
 <template name= "home">
-  <div class="header">
-     <div class="wrap">
-        <div class="header_bottom">
-         	<div class="slider-text">
-          		<h2>Proximamente <br/>Batman v Superman: Dawn Of Justice</h2>
-          		<p>Desde el director Zack Snyder viene Batman v Superman: El origen de Justicia, protagonizada por Ben Affleck como Batman y Henry Cavill como Superman en primera pareja en la pantalla grande de los personajes.</p>
-          		<a href="#">Compralo ahora </a>
-          </div>
-        <div class="slider-img">
-              <img src="images/bvs.jpg" alt="" />
-         </div>
-           <div class="clear"></div>
-        </div>
-      </div>
-  </div>
+  {{>pageheader}}
 
   <div class="main">
     <div class="content">
@@ -78,7 +64,8 @@
 </template>
 
 <template name="peliculasCard">
-  <div class="grid_1_of_4 images_1_of_4">
+
+  <div class="col-sm-3 grid_1_of_4 movie_block">
     <h4><a href="/preview/{{id}} "> {{title}} </a> </h4>
     <a href="#"> <img src="/images/{{image}}" alt="" /></a>
       <div class="price-details">
@@ -91,27 +78,16 @@
     <div class="clear"></div>
       </div>           
   </div>
+
 </template>
 
 <template name="LMP">
   <h3>Las más populares </h3>
 
     <div class="section group">
-        {{#each peliculas1}}
+        {{#each peliculas}}
             {{ > peliculasCard}}
         {{/ each}}
-    </div>
-
-    <div class="section group">
-      {{#each peliculas2}}
-        {{ > peliculasCard}}
-      {{/ each}}
-    </div>
-
-    <div class="section group">
-      {{#each peliculas3}}
-        {{ > peliculasCard}}
-      {{/ each}}
     </div>           
 
 </template>
@@ -142,7 +118,9 @@
   <div class="categories">
     <ul>
       <h3> Categorías </h3>
+      {{#each categoria}}
         <li><a href="{{pathFor 'preview'}}">Acción </a></li>
+      {{/each}}
         <li><a href="#">Drama </a></li>
         <li><a href="#">Romantica </a></li>
         <li><a href="#"> Infantil </a></li>
@@ -180,4 +158,23 @@
      </div>
      <div class="clear"></div>
   </div>
+</template>
+
+
+<template name="pageheader">
+  <div class="header">
+     <div class="wrap">
+        <div class="header_bottom">
+          <div class="slider-text">
+              <h2>Próximamente<br/>Batman v Superman: Dawn Of Justice</h2>
+              <p>Desde el director Zack Snyder viene Batman v Superman: El origen de Justicia, protagonizada por Ben Affleck como Batman y Henry Cavill como Superman en primera pareja en la pantalla grande de los personajes.</p>
+              <a href="#">Compralo ahora </a>
+          </div>
+        <div class="slider-img">
+              <img src="images/bvs.jpg" alt="" />
+         </div>
+           <div class="clear"></div>
+        </div>
+      </div>
+  </div>  
 </template>
