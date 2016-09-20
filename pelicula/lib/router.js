@@ -74,7 +74,7 @@ Router.route('/products/:id', function () {
 Router.route('/preview/:id', function() {
 
 	var that = this;
-	var pelicula = _.find(Peliculas1, function(prod){
+	var pelicula = _.find(peliculasList, function(prod){
 		return (prod.id === that.params.id);
 		});
 
