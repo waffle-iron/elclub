@@ -22,7 +22,6 @@ Template.tabs.events({
 		document.getElementById('tab2'). style.display='none';
 		document.getElementById('tab1'). style.display='initial';
 		document.getElementById('tab3')	. style.display='none';
-
 	},
 	
 	'click .tab1': function() {
@@ -36,16 +35,12 @@ Template.tabs.events({
 		document.getElementById('tab2'). style.display='initial';
 		document.getElementById('tab1'). style.display='none';
 		document.getElementById('tab3')	. style.display='none';
-
-
-				
 	},
 
 	'click .tab3': function() {
 		document.getElementById('tab2'). style.display='none';
 		document.getElementById('tab1'). style.display='none';
 		document.getElementById('tab3')	. style.display='initial';
-
 	}
 })
 
@@ -58,7 +53,7 @@ Template.productDetail.helpers({
 })
 
 Template.masPopulares.helpers({
-	peliculasMasPopulares: getPeliculas(orderByPopularity,0,3)
+	peliculasMasPopulares: Sistema.Peliculas.get(0,20,"popularity")
 })
 
 

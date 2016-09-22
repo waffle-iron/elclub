@@ -5,6 +5,6 @@ import './home.html';
 
 Template.lasMasPopulares.helpers({
 		peliculas: function(){
-			return getPeliculas(orderByPopularity,0,20); 
+			return Sistema.Peliculas.get(0,20,"popularity"); 
 		}	
 });

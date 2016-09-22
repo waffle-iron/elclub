@@ -36,9 +36,11 @@
           	<div class="logo">
             	<a href="{{pathFor 'home'}}"><img src="images/logo9.png" alt="" /></a>
           	</div>
-            <div class="header_top_right">
+          	
+          	
+          	<div class="header_top_right">
                 <div class="search_box">
-                  	<span>Search</span>
+                  	<span>{{> loginButtons}}               Buscar</span>
                   		<form>
                     		<input type="text" value=""><input type="submit" value="">
                   		</form>
@@ -67,16 +69,12 @@
             		</li>
             		<li>
              			 <a href="#"> Recien Agregadas </a>
-           			 </li> 
-                <li>
-                   <a href="#"> Entrar </a>
-                 </li>
-           			 <li>
-              			<a href="#">Regístrate</a>
            			 </li>
            			 <li>
              			 <a href="{{pathFor 'contact'}}">Contáctenos </a>
             		</li>
+                    	
+                    
          		 </ul>
            <span class="left-ribbon"> </span> 
                <span class="right-ribbon"> </span>    
