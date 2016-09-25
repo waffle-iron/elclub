@@ -48,28 +48,92 @@ body {
 .header {
 	z-index: -10;
 	background:#23272a;
-	padding:20px 0;
+	padding: 5px 0;
 }
 .header_top {
-	padding-bottom:25px;
+	padding-bottom:0;
+	height: 100px;
 }
 .logo {
 	float: left;
 }
+.logo img{
+	margin-top: 10px;
+	max-height: 80px;
+}
+
 #login-buttons {
+	float:left;
 	border: none !important;
-	margin-right:10px;
-	padding-top:10px;
+	margin-right: 2em;
 }
 
 #login-buttons a {
+	margin-top:0.35em;
+	vertical-align: middle;
 	color: #5b5b5b;
-	text-decoration: none !important;
+	cursor: pointer;
 	
+	text-decoration: none !important;
 }
+
+#login-dropdown-list{
+	line-height: 2.4em;
+	padding: 0.5em 1.1em 0.5em 1.5em;
+	position: absolute;
+	background-color: #F2F2F2;
+	width: 280px;
+	z-index: 500;
+	border: 1px solid #5b5b5b ;
+	border-radius: 3px;
+	
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+#login-dropdown-list a {
+	color:#B82439;
+	top: -1em;
+	left: -1em;
+}
+
+.login-form input, .login-password-form input {
+	width: 150px;
+	border: 1px solid #5b5b5b ;
+	border-radius: 3px;
+	max-height: 2em;
+	position: absolute;
+	left: 6.5em;
+	/*margin-bottom: 1em;*/
+}
+
+
+
+.additional-link-container > #signup-link{
+	text-align: left;
+	float:left;
+}
+
+.additional-link-container > #forgot-password-link{
+	text-align: right;
+	float:right;
+}
+
+.additional-link{
+	font-size: 0.6em;
+}
+
+.additional-link, .login-button-form-submit {
+	color: #B82439;
+	text-align: center;
+	cursor: pointer;
+}
+
 .header_top_right{
 	float:right;
-	padding-top:10px;
+	margin-top:31.5px;
 }
 .search_box span{
    color:#5b5b5b;
@@ -115,7 +179,7 @@ body {
 }
 /** Navigation **/
 .navigation{
-	background:#e44f2b;
+	background:#1594CF;
 	padding:5px 0;
 	position:relative;
 }
@@ -169,8 +233,8 @@ div.right-ribbon{
     padding:16px 15px;
     color: #fff;
     width:95%;
-     border-top:1px solid #DB3C15;
-     border-bottom:1px solid #DB3C15;
+     border-top:1px solid #007AB3;
+     border-bottom:1px solid #007AB3;
      background:url("../images/nav-icon.png") no-repeat 98% center;
 }
 .nav {
@@ -178,9 +242,9 @@ div.right-ribbon{
     display: ;
     z-index: 3;
     zoom: 1;
-    background:	#e44f2b;
-    border-top:	1px solid #DB3C15;
-    border-bottom:	1px solid #DB3C15;
+    background:	#1594CF;
+    border-top:	1px solid #007AB3;
+    border-bottom:	1px solid #007AB3;
     height: 40px;
     padding: 0 25px;
 }
@@ -199,8 +263,8 @@ div.right-ribbon{
 }
 .nav a {
     padding:16px 33px;
-    color:#ffb29f;
-    /*border-top: 1px solid #DB3C15;*/
+    color:#B4D2E0;
+    /*border-top: 1px solid #007AB3;*/
     -webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -208,7 +272,7 @@ div.right-ribbon{
 }
 .nav a:hover {
 	color:#FFF;
-	background-color: #DB3C15 !important;
+	background-color: #007AB3 !important;
 }
 .nav li {
     position: relative;
@@ -218,12 +282,15 @@ div.right-ribbon{
 }
 .nav > li:first-child/*,.nav > li:last-child*/ {
 	background-image:none;
+	margin-left: 8%
 }
-.nav > li {
+/*.nav > li {
+	/*content: "|";
     background-image: url("../images/line-divider.png");
     background-repeat: no-repeat;
     background-position:left;
-}
+}*/
+
 .nav > li > a {
     display: block;
 }
@@ -240,20 +307,20 @@ div.right-ribbon{
 }
 .nav li li a {
     display: block;
-    background:#EA5E3C;
+    background:#2C96C7;
     position: relative;
     z-index:100;
-    border-top:1px solid #EF7A5D;
+    border-top:1px solid #358CB5;
     padding:10px;
     font-size:15px;
 }
 .nav li li a:hover {
-	  background:#DB502E;
+	  background:#328DB8;
 }
 .nav li li li a {
-    background:#ED6A4A;
+    background:#61AFD4;
     z-index:200;
-    border-top:1px solid #EF7A5D;
+    border-top:1px solid #358CB5;
 }
 
 @media screen and (max-width: 768px) {
@@ -289,20 +356,20 @@ div.right-ribbon{
 }
 .header_bottom{
 	background:#23272a;
-	padding:6%  0 2%;
+	padding: 2%  0 2%;
 }
 .slider-text{
 	float:left;
 	width:50%;
 }
 .slider-text h2{
-	color:#e44f2b;
-	font-size:40px;
+	color:#1594CF;
+	font-size:1.8em;
 }
 .slider-text p{
 	color:#8fa7ae;
-	font-size:20px;
-	margin:20px 0;
+	font-size:1.2em;
+	margin:0.5em 0;
 }
 .slider-text a{
 	background:#8fa7ae;
@@ -341,9 +408,11 @@ div.right-ribbon{
 .slider-img{
 	float:right;
 	width:42%;
+	
 }
 .slider-img img{
-	margin-top:-50px;
+	margin-top:0px;
+	max-height:250px;
 }
 /** Content **/
 .content_top{
@@ -352,7 +421,7 @@ div.right-ribbon{
 }
 .content_top h3{
 	font-size:25px;
-	color:#e44f2b;
+	color:#B82439;
 	padding-bottom:15px;
 }
 .line{
@@ -378,7 +447,7 @@ div.right-ribbon{
 	width:30px;
 	height:30px;
 	text-align:center;
-	background:#e44f2b url("../images/arrows.png") no-repeat;
+	background:#1594CF url("../images/arrows.png") no-repeat;
 	border-radius:2em;
 	-webkit-border-radius:2em;
 	-moz-border-radius:2em;
@@ -422,7 +491,7 @@ div.right-ribbon{
   text-align:center;	
 }
 .ocarousel_window_slides a:hover p{
- color:#e44f2b;
+ color:#1594CF;
  text-decoration:underline;
 }
 .ocarousel_indicators {
@@ -448,7 +517,7 @@ div.right-ribbon{
 	color:#FFF;
 	padding:10px;
 	padding-left:25px;
-	background:#e44f2b;
+	background:#1594CF;
 	position:relative;
 	margin-bottom:5px;
 }
@@ -487,7 +556,7 @@ div.right-ribbon{
 	border:none;
 }
 .categories li a:hover{
-	color:#e44f2b;
+	color:#1594CF;
 }	
 .buters-guide{
 	margin-top:2em;
@@ -499,7 +568,7 @@ div.right-ribbon{
 	padding:8px 0;
 }
 .buters-guide p span{
-	color:#e44f2b;
+	color:#1594CF;
 	font-size:16px;
 }
 .add-banner{
@@ -517,16 +586,16 @@ div.right-ribbon{
 .banner-desc h4{
 	display:block;
 	font-size:25px;
-	color:#e44f2b;
+	color:#1594CF;
 	margin-bottom:10px;
 }
 .banner-desc a{
-	background:#e44f2b !important;
+	background:#1594CF !important;
 	padding:5px 15px !important;
 	display:inline-block !important;
 }
 .banner-desc a:hover{
-	background:#D03D1A !important;
+	background:#0977AB !important;
 }
 .add-banner2{
 	background:url("../images/banner-bg.png") repeat-x;
@@ -574,7 +643,7 @@ div.right-ribbon{
 	max-width: 100%;
 }
 .movie_block  h4  a{
-	color:#e44f2b;
+	color:#1594CF;
 	font-size:16px;
 	padding-bottom:5px;
 }
@@ -647,7 +716,7 @@ div.right-ribbon{
 	font-size:18px;
 }
 .product-articles p a{
-	color:#e44f2b;
+	color:#1594CF;
 	font-size:14px;
 }
 .product-articles p a:hover{
@@ -664,7 +733,7 @@ div.right-ribbon{
 }
 /*** Footer ***/
 .footer {
-	background:#e44f2b;
+	background:#1594CF;
 	padding:3% 0;
 }
 .footer-nav{
@@ -744,7 +813,7 @@ div.right-ribbon{
 }
 .back-links  a:hover {
 	text-decoration:underline;
-	color:#e44f2b;
+	color:#1594CF;
 }
 .image {
 	clear: both;
@@ -804,7 +873,7 @@ div.right-ribbon{
 }
 .span_3_of_2  h2 {
 	font-size: 1.2em;
-	color:#e44f2b;
+	color:#1594CF;
 	font-weight: normal;
 	margin-top: 0px;
 }
@@ -823,7 +892,7 @@ div.right-ribbon{
 }
 .price p span {
 	font-size:2em;
-	color:#e44f2b;
+	color:#1594CF;
 	font-family:'Ubuntu Condensed', sans-serif;
 }
 .available {
@@ -878,7 +947,7 @@ div.right-ribbon{
 	text-decoration: underline;
 }
 .wish-list li a:hover {
-	color:#e44f2b;
+	color:#1594CF;
 	text-decoration:none;
 }
 .wish-list li.wish{
@@ -925,7 +994,7 @@ div.right-ribbon{
 	background:#000;
 }
 .checkbox-buttons label:hover{
-	border:2px solid #e44f2b;
+	border:2px solid #1594CF;
 }
 .checkbox-buttons input[type="checkbox"],
 .checkbox-buttons input[type="radio"] {
@@ -933,7 +1002,7 @@ div.right-ribbon{
 }
 .checkbox-buttons input[type="checkbox"]:checked + label,
 .checkbox-buttons input[type="radio"]:checked + label {
-	border:2px solid #e44f2b;
+	border:2px solid #1594CF;
 } 
 .colors-share{
 	margin-top:15px;
@@ -1001,7 +1070,7 @@ div.right-ribbon{
 	font-size:0.85em;
 	display: block;
 	padding:8px 10px;
-	background:#e44f2b;
+	background:#1594CF;
 	color: #FFF;
 	text-decoration: none;
 	outline: 0;
@@ -1024,7 +1093,7 @@ div.right-ribbon{
   margin-top:10px;
 }
 .popular-products li > h4 > a{
-	color: #e44f2b;
+	color: #1594CF;
 	font-size: 14px;
 	padding-bottom: 5px;
 }
@@ -1033,7 +1102,7 @@ div.right-ribbon{
 }
 .popular-products li .price-number p span.line-through{
 	text-decoration:line-through;
-	color:#e44f2b;
+	color:#1594CF;
 }
 .preview-page{
 	padding:2% 0;
@@ -1304,7 +1373,7 @@ div.right-ribbon{
 	font-size:16px;
 	padding:10px 25px;
 	font-family: 'Ubuntu Condensed', sans-serif;
-	background:#e44f2b;
+	background:#1594CF;
 	color: #FFF;
 	border:none;
 	text-decoration: none;

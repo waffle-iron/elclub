@@ -55,6 +55,13 @@ Template.productDetail.helpers({
 Template.masPopulares.helpers({
 	peliculasMasPopulares: Sistema.Peliculas.get(0,20,"popularity")
 })
-
+/*
+Template.review.rendered({
+	
+	 template.$(".rating").starRating({
+		minus: true // step minus button
+	});
+	
+})*/
 
 
