@@ -92,24 +92,25 @@
 
 </template>
 
-<template name="ultimasNoticias">
-  <div class="product-articles">
-    <h3>Últimas noticias del cine</h3>
-    <ul>
-      <li>
+<template name="articulo">
+  <li>
         <div class="article">
-          <p><span>Zombieland 2’: Paul Wernick y Rhett Reese confirman que ya están trabajando en la secuela</span></p>
-          <p>Los guionistas de ‘Deadpool’ han hablado sobre el futuro de la película con muertos vivientes en un programa de la cadena AMC..</p>
-          <p><a href="#">+ Leer mas</a></p>
+          <p><span>{{title}}</span></p>
+          <p>{{description}}</p>
+          <p><a href="{{link}}">+ Leer mas</a></p>
         </div>
       </li>
-      <li>
-        <div class="article">
-          <p><span>Rogue One: Una historia de Star Wars': Jyn Erso, Orson Krennic y Chirrut Îmwe, en las nuevas imágenes del 'spin-off'</span></p>
-          <p> La primera película antológica de 'La Guerra de las Galaxias', dirigida por Gareth Edwards, se estrena en España el 16 de diciembre.</p>
-          <p><a href="#">+ Leer mas</a></p>
-        </div>
-       </li>
+</template>
+
+
+<template name="ultimasNoticias">
+  <div class="product-articles">
+    <h3>Sensacine.com - Últimas noticias del cine</h3>
+    <ul>
+      {{#each noticias}}
+        {{>articulo}}
+      {{/each}}
+      
      </ul>
   </div>
 </template>
