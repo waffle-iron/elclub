@@ -1091,6 +1091,7 @@ div.right-ribbon{
   text-align:center;
   padding:4%;
   margin-top:10px;
+  max-width:186px;
 }
 .popular-products li > h4 > a{
 	color: #1594CF;

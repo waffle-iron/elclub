@@ -30,3 +30,9 @@ http
 
 
 peerlibrary:xml2js
+meteor-platform
+meteorhacks:npm
+
+
+npm-container
+alanning:roles

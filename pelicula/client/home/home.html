@@ -66,14 +66,14 @@
 <template name="peliculasCard">
 
   <div class="col-sm-3 grid_1_of_4 movie_block">
-    <h4><a href="/preview/{{id}} "> {{title}} </a> </h4>
+    <h4><a href="/preview/{{sku}} "> {{title}} </a> </h4>
     <a href="#"> <img src="/images/{{image}}" alt="" /></a>
       <div class="price-details">
         <div class="price-number">
           <p><span class="rupees">{{price}} </span></p>
         </div>
         <div class="add-cart">                
-          <h4><a href="/preview/{{id}}">Mas detalles</a></h4>
+          <h4><a href="/preview/{{sku}}">Mas detalles</a></h4>
         </div>
     <div class="clear"></div>
       </div>           
@@ -86,7 +86,7 @@
 
     <div class="section group">
         {{#each peliculas}}
-            {{ > peliculasCard}}
+            {{ > peliculasCard this}}
         {{/ each}}
     </div>           
 

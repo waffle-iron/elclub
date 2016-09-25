@@ -3,24 +3,21 @@ Meteor.publish('postsApproved', function()
 	return Posts.find({status: 1})
 });
 
-Meteor.publish('oldfeeds',function(){
-    //Client.Feed.data = Server.Feed.data;
-    //var rss = new Rss();
-    //var data = rss.parse('http://rss.sensacine.com/actualidad/toda')
-    
-    //console.log(data);
-    
-    Feeds.remove();
-    
-    //Feeds.insert(data);
-    
-    return Feeds.find();
-}); 
-
-
 Meteor.publish('feeds', function() {
-	
 	return Feeds.find();
-	
 });
 
+Meteor.publish("cart", function(key){
+  check(key, String);
+  return Carts.find({userKey : key});
+});
+
+
+Meteor.publish("products-by-sku", function(msku){
+  check(msku, String);
+  return Products.find({sku : msku});
+});
+
+Meteor.publish("products",function(){
+  return Products.find({});//////////7AQJUI 
+});

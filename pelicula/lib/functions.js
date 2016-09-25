@@ -2,9 +2,10 @@ Sistema = {
 	
 	Peliculas: {
 		get:	function(from,to,parameter) {
-					return	peliculasList
-							.sort( function(a,b){return a.parameter - b.parameter} )
-							.slice(from,to);
+				Meteor.subscribe("products");
+					return	Products.find({})
+							;//.sort( function(a,b){return a.parameter - b.parameter} )
+							//.slice(from,to);
 				}		 	
 		},
 	

@@ -47,13 +47,15 @@ Template.tabs.events({
 Template.productDetail.helpers({
 	
 	specification: function() {
-		return peliculasList;
+		return Products.find({});//Sistema.Peliculas.get;//(0,1,sku);
 	}
 
 })
 
 Template.masPopulares.helpers({
-	peliculasMasPopulares: Sistema.Peliculas.get(0,20,"popularity")
+	peliculasMasPopulares: function(){
+		return Products.find({});//	return Sistema.Peliculas.get(0,20,"popularity"); 
+	},//Sistema.Peliculas.get(0,20,"popularity")
 })
 /*
 Template.review.rendered({
@@ -63,5 +65,23 @@ Template.review.rendered({
 	});
 	
 })*/
+
+Template.productDetail.rendered = function(){
+	Meteor.subscribe("products");
+}
+
+Template.productDetail.events({
+  "click #add-to-cart" : function(ev){
+    ev.preventDefault();
+    console.log("EL SKU AHORA MISMO ES: " + this.sku );
+    addToCart(this.sku, function(err,res){
+      if(err){
+        console.log(err);
+      }else{
+        Router.go("cartShow");
+      }
+    });
+  }
+});
 
 

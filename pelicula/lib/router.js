@@ -40,6 +40,7 @@ Router.route('/preview', {
 	}   
 });
 
+Router.route('/cart', { name: "cartShow"});
 
 Router.route('/login', { name: "login"});
 
@@ -69,17 +70,33 @@ Router.route('/products/:id', function () {
   });
 });
 
-//*/
+/*
 
-Router.route('/preview/:id', function() {
+Router.route('/preview/:sku', function() {
 
 	var that = this;
-	var pelicula = _.find(peliculasList, function(prod){
-		return (prod.id === that.params.id);
+	var pelicula = _.find( Products, function(prod){
+			return (prod.sku === that.params.sku);
 		});
 
+	console.log(that.params.sku);
+
 	this.render('productDetail',{
-		data: pelicula
+		data: pelicula,
 	});
 
 });
+
+*/
+
+
+Router.route("/preview/:sku", {
+  name : "productDetail",
+  waitOn : function(){
+    return Meteor.subscribe("products-by-sku", this.params.sku);
+  },
+  data : function(){
+    return Products.findOne({sku : this.params.sku});
+  }
+});
+// */
