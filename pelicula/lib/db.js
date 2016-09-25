@@ -4,7 +4,8 @@ Feeds = new Mongo.Collection("feeds");
 
 Meteor.startup( function(){
     
-    Feeds.remove({});
+    
+    Sistema.Feed.reload();
     if (Meteor.isServer) {
         console.log("feeds reinitialized");
     }
