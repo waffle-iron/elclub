@@ -39,7 +39,7 @@ Sistema = {
 			                Feeds.insert(currentItem);
 			            }
 			            
-			            console.log(items);
+			            //console.log(items);
 			        });
 				}
 				
