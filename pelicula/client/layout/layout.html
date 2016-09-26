@@ -3,16 +3,9 @@
 
  		{{> header}}
   		<a href="#" id="toTop"> </a>
-    	<!--script type="text/javascript" src="../js/navigation.js"></script-->
-	
  		{{>yield}}
     {{>footer}}
-    <!--script type="text/javascript">
-    $(document).ready(function() {      
-      $().UItoTop({ easingType: 'easeOutQuart' });
-      
-    });
-  </script-->
+    
  	</body>
 
 </template>
@@ -28,7 +21,7 @@
           	
           	<div class="header_top_right">
                 <div class="search_box">
-                  	<span>{{> loginButtons}} Buscar</span>
+                  	<span> Buscar</span>
                   		<form>
                     		<input type="text" value=""><input type="submit" value="">
                   		</form>
@@ -55,12 +48,12 @@
             		<li>
               			<a href="#"> Trailers </a>
             		</li>
-            		<li>
-             			 <a href="#"> Recien Agregadas </a>
-           			 </li>
            			 <li>
              			 <a href="{{pathFor 'contact'}}">Contáctenos </a>
             		</li>
+                <li>
+                   <a href="{{pathFor 'login'}}"> Iniciar Sesión </a>
+                 </li>
                     	
                     
          		 </ul>
@@ -90,3 +83,4 @@
         </div>
     </div>
 </template>
+

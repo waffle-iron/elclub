@@ -62,75 +62,6 @@ body {
 	max-height: 80px;
 }
 
-#login-buttons {
-	float:left;
-	border: none !important;
-	margin-right: 2em;
-}
-
-#login-buttons a {
-	margin-top:0.35em;
-	vertical-align: middle;
-	color: #5b5b5b;
-	cursor: pointer;
-	
-	text-decoration: none !important;
-}
-
-#login-dropdown-list{
-	line-height: 2.4em;
-	padding: 0.5em 1.1em 0.5em 1.5em;
-	position: absolute;
-	background-color: #F2F2F2;
-	width: 280px;
-	z-index: 500;
-	border: 1px solid #5b5b5b ;
-	border-radius: 3px;
-	
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-
-#login-dropdown-list a {
-	color:#B82439;
-	top: -1em;
-	left: -1em;
-}
-
-.login-form input, .login-password-form input {
-	width: 150px;
-	border: 1px solid #5b5b5b ;
-	border-radius: 3px;
-	max-height: 2em;
-	position: absolute;
-	left: 6.5em;
-	/*margin-bottom: 1em;*/
-}
-
-
-
-.additional-link-container > #signup-link{
-	text-align: left;
-	float:left;
-}
-
-.additional-link-container > #forgot-password-link{
-	text-align: right;
-	float:right;
-}
-
-.additional-link{
-	font-size: 0.6em;
-}
-
-.additional-link, .login-button-form-submit {
-	color: #B82439;
-	text-align: center;
-	cursor: pointer;
-}
-
 .header_top_right{
 	float:right;
 	margin-top:31.5px;
@@ -1645,4 +1576,45 @@ div.right-ribbon{
    	width:100%;
    	text-align:center;
    }
+}
+
+.tweetbox-container {
+  margin: 30px;
+  margin-left: 10px;
+}
+
+.tweetbox,.userBox {
+  background-color: rgb(240, 247, 254);
+  line-height: 2.4em;
+	padding: 0.5em 1.1em 0.5em 1.5em;
+	
+	width: 1180px;
+	z-index: 500;
+	
+	border-radius: 3px;
+	
+
+}
+
+
+
+.user-container {
+  margin-top: 30px;
+  margin-left: 130px;
+}
+
+.user-container h4 {
+  color: gray;
+}
+
+.user-container .fullbutton {
+  width: 10%;
+}
+
+.user-container .input-sm {
+  margin-bottom: 5px;
+}
+
+.user-container .login {
+  margin-bottom: 15px;
 }
