@@ -53,7 +53,7 @@
 							<h2>  {{title}} </h2>
 							<p>{{descrip}}</p>					
 							<div class="price">
-								<p>Precio: <span>{{price}}</span></p>
+								<p>Precio: <span class="bolivares">{{price}}</span></p>
 							</div>
 							<div class="available">
 								<ul>
@@ -72,7 +72,7 @@
 						                <i class="glyphicon glyphicon-shopping-cart"></i>
 						                Agregar al Carrito
 						              </a></li>
-							 	    <li class="compare"><a href="#">Agregar a favoritos </a></li>
+							 	    <li class="favorito"><a href="#">Agregar a favoritos </a></li>
 							 	</ul>
 							 </div>
 							 <div class="colors-share">
@@ -241,7 +241,7 @@
 				<a href="preview/{{sku}}"><img src="images/{{image}}" alt="" /></a>
 				<div class="price-details">
 					<div class="price-number">
-					<p><span class="rupees line-through">{{previous_price}} </span> &nbsp; <span class="rupees">{{price}} </span></p>
+					<p><span class="bolivares line-through">{{previous_price}}</span> &nbsp; <span class="bolivares">{{price}} </span></p>
 					</div>
 					<div class="add-cart">								
 						<h4><a href="preview/{{sku}}">Mas detalles</a></h4>

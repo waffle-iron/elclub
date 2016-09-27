@@ -47,7 +47,7 @@ Template.tabs.events({
 Template.productDetail.helpers({
 	
 	specification: function() {
-		return Products.find({});//Sistema.Peliculas.get;//(0,1,sku);
+		return Products.findOne({sku : this.params.mysku});//Sistema.Peliculas.get;//(0,1,sku);
 	}
 
 })
@@ -73,6 +73,7 @@ Template.productDetail.rendered = function(){
 Template.productDetail.events({
   "click #add-to-cart" : function(ev){
     ev.preventDefault();
+    console.log(this );
     console.log("EL SKU AHORA MISMO ES: " + this.sku );
     addToCart(this.sku, function(err,res){
       if(err){

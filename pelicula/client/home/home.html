@@ -1,24 +1,26 @@
-<template name= "home">
-  {{>pageheader}}
+<!--template name = "home">
+  {{>bodyProductos a=this}}
+</template-->
 
+<template name= "bodyProductos">
   <div class="main">
     <div class="content">
-      <div class="content_top">
+      <!--div class="content_top">
         <div class="wrap">
-          <h3>Ultimas Peliculas </h3>
+          <h3>{{titulo}} </h3>
         </div>
         <div class="line"> </div>
           <div class="wrap">
             <div class="ocarousel_slider">  
               <div class="ocarousel example_photos" data-ocarousel-perscroll="3">
                 <div class="ocarousel_window">
-                  <a href="{{pathFor 'hello4'}}" title="img1"> <img src="images/ultimas-peliculas-img1.jpg" alt="" /><p>Mision Imposible 6</p></a>
+                  <a href="#" title="img1"> <img src="images/ultimas-peliculas-img1.jpg" alt="" /><p>Mision Imposible 6</p></a>
                   <a href="#" title="img2"> <img src="images/ultimas-peliculas-img2.jpg" alt="" /><p>Termineitor: Genesis</p></a>
                   <a href="#" title="img3"> <img src="images/ultimas-peliculas-img3.jpg" alt="" /><p>El secreto de adaline</p></a>
                   <a href="#" title="img4"> <img src="images/ultimas-peliculas-img4.jpg" alt="" /><p>El libro de la selva </p> </a>
                   <a href="#" title="img5"> <img src="images/ultimas-peliculas-img5.jpg" alt="" /><p>Interestellar </p></a>
                   <a href="#" title="img6"> <img src="images/ultimas-peliculas-img6.jpg" alt="" /><p>Yo antes de ti</p></a>
-                  <a href="{{pathFor 'preview'}}" title="img1"> <img src="images/ultimas-peliculas-img1.jpg" alt="" /><p>Mision Imposible 6</p></a>
+                  <a href="#" title="img1"> <img src="images/ultimas-peliculas-img1.jpg" alt="" /><p>Mision Imposible 6</p></a>
                   <a href="#" title="img2"> <img src="images/ultimas-peliculas-img2.jpg" alt="" /><p>Termineitor: Genesis</p></a>
                   <a href="#" title="img3"> <img src="images/ultimas-peliculas-img3.jpg" alt="" /><p>El secreto de adaline</p></a>
                   <a href="#" title="img4"> <img src="images/ultimas-peliculas-img4.jpg" alt="" /><p>El libro de la selva </p> </a>
@@ -32,7 +34,7 @@
               </div>
              </div>  
            </div>       
-        </div>
+        </div-->
         <div class="content_bottom">
           <div class="wrap">
             <div class="content-bottom-left">
@@ -42,7 +44,8 @@
             </div>
             
             <div class="content-bottom-right">
-              {{>lasMasPopulares}}
+              <h3>{{title}}</h3>
+              {{>lasMasPopulares productos=this}}
               {{>ultimasNoticias}}
             </div>
            <div class="clear"></div>
@@ -65,15 +68,15 @@
 
 <template name="peliculasCard">
 
-  <div class="col-sm-3 grid_1_of_4 movie_block">
-    <h4><a href="/preview/{{sku}} "> {{title}} </a> </h4>
+  <div class="col-sm-3 grid_1_of_4 product_block">
+    <h4><a href="/p/{{sku}} "> {{title}} </a> </h4>
     <a href="#"> <img src="/images/{{image}}" alt="" /></a>
       <div class="price-details">
         <div class="price-number">
-          <p><span class="rupees">{{price}} </span></p>
+          <p><span class="bolivares">{{price}}</span></p>
         </div>
         <div class="add-cart">                
-          <h4><a href="/preview/{{sku}}">Mas detalles</a></h4>
+          <h4><a href="/p/{{sku}}">Mas detalles</a></h4>
         </div>
     <div class="clear"></div>
       </div>           
@@ -82,10 +85,10 @@
 </template>
 
 <template name="lasMasPopulares">
-  <h3>Las más populares </h3>
+  
 
     <div class="section group">
-        {{#each peliculas}}
+        {{#each productos}}
             {{ > peliculasCard this}}
         {{/ each}}
     </div>           
@@ -162,7 +165,7 @@
 </template>
 
 
-<template name="pageheader">
+<template name="proxEstrenos">
   <div class="header">
      <div class="wrap">
         <div class="header_bottom">

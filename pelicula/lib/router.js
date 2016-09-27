@@ -18,18 +18,33 @@ Router.configure({
 	}   
 });-*/
 
-Router.route('/', {
-
-	name: "home",
-	date:{
-		posts: function()
-		{
-			return Post.find();
-	    }
-	}   
+Router.route("/", {
+	
+	
+		name : "home",
+  
+	  waitOn : function(){
+	     
+	    Sistema.categoria = "Las mejores series y películas" 
+	     
+	    return Meteor.subscribe("products");
+	  },
+	  
+	  template: "bodyProductos",
+	  
+	  yieldRegions: {
+    'proxEstrenos': {to: 'bodyheader'},
+  	},
+  	
+  	data : function(){
+    return Products.find({} , {"sort" : ['id', 'asc']} );
+  	},//*/
+	  
+  
+	
 });
 
-Router.route('/preview', {
+Router.route('/p', {
 
 	name: "preview",
 	date:{
@@ -90,7 +105,67 @@ Router.route('/preview/:sku', function() {
 */
 
 
-Router.route("/preview/:sku", {
+Router.route("/p/:mysku", {
+	
+  name : "productDetail",
+  
+  waitOn : function(){
+    return Meteor.subscribe("products-by-sku", this.params.mysku);
+  },
+  
+  data : function(){
+    return Products.findOne({sku : this.params.mysku});
+  }
+  
+});
+
+Router.route("/productos/", {
+	
+  name : "productos",
+  
+  template: "bodyProductos",
+  
+  waitOn : function(){
+    return Meteor.subscribe("products");
+  },
+  
+  data : function(){
+    return Products.find({} , {"sort" : ['sku', 'asc']} );
+  },
+	  
+});
+
+Router.route("/productos/:type", {
+	
+  name : "productos filtrados",
+  
+  template: "bodyProductos",
+  
+  waitOn: function(){
+      
+     if (Meteor.isClient){
+	    var str = String(this.params.type);
+	    str = str.split("-").join(" ");
+	    console.log(str);
+        Sistema.categoria = str.charAt(0).toUpperCase() + str.slice(1);
+     }
+     
+    return Meteor.subscribe("products");
+  },
+  
+  data : function(){
+    return Products.find({tipo : this.params.type})
+  },
+  
+  title: ":type",
+  /*
+  
+	  */
+});
+
+
+/*
+Router.route("/productos/:sku", {
   name : "productDetail",
   waitOn : function(){
     return Meteor.subscribe("products-by-sku", this.params.sku);

@@ -347,7 +347,7 @@ div.right-ribbon{
 }
 /** Content **/
 .content_top{
-  padding:2em 0;
+  padding:0em 0;
   background:#FFF;
 }
 .content_top h3{
@@ -560,45 +560,67 @@ div.right-ribbon{
 }
 .grid_1_of_4:first-child {
 }
-.movie_block {
+.product_block {
 	width:180px;
 	padding:1.5%; 
 	text-align: center;
+	vertical-align: middle;
 	position: relative;
 	background:#FFF;
+	min-height: 280px;
 }
-.movie_block  a{
+.product_block  a{
 	display:block;
 }
-.movie_block  img {
+.product_block  img {
 	max-width: 100%;
+	height: 140px;
+	margin-bottom: 0.4em;
 }
-.movie_block  h4  a{
+.product_block  h4  a{
 	color:#1594CF;
 	font-size:16px;
 	padding-bottom:5px;
 }
-.movie_block  p {
+.product_block  p {
 	font-size:22px;
 	padding: 0.4em 0;
 	color: #333;
 }
-.movie_block  p span.price {
+.product_block  p span.price {
 	font-size: 18px;
 	color:#CC3636;
 }
 .price-details{
 	border-top:1px solid #EEE;
 }
-.price-details p span.rupees{
+.price-details p span.bolivares{
 	font-size:22px;
 	color:#23272a;
 }
+
+span.bolivares:not(:empty):after{
+	content: " Bsf.";
+}
+
+#add-to-cart{
+	color: #F2F2F2;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+#add-to-cart{
+	color: #F2F2F2;
+	text-decoration: none;
+}
+
 .add-cart{
 	display: inline-block;
 }
 .add-cart h4 a,.banner-desc a{
-	font-size:0.85em;
+	font-size:0.79em;
 	display: block;
 	padding:6px 20px;
 	background:#8fa7ae;
@@ -884,10 +906,21 @@ div.right-ribbon{
 .wish-list li.wish{
 	background:url(../images/wishlist.png) no-repeat 0;
 }
-.wish-list li.compare{
-	background:url(../images/compare.png) no-repeat 0;
+.wish-list li.favorito a{
+	background:url(../images/wishlist.png) no-repeat 0;
 	margin-right:0;
+	text-decoration: none;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out; ;
 }
+
+.wish-list li.favorito:hover a{
+	color: #585828;
+	text-shadow: 0px 0px 8px rgba(255, 223, 0, 1);
+}
+
 /* Checkbox Buttons */
  .checkbox-buttons ul{
  	margin:0;
@@ -1005,14 +1038,15 @@ div.right-ribbon{
 	color: #FFF;
 	text-decoration: none;
 	outline: 0;
-	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
+	border-radius: 3px;	
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 .span_3_of_2 .button a:hover {
-	 text-shadow: 0px 0px 1px #000;
-	  background:#292929;
+	 /*text-shadow: 0px 0px 1px #000;*/
+	  background:#1274Af;
 }
 .popular-products li:first-child{
 	margin-top:0;
@@ -1035,6 +1069,8 @@ div.right-ribbon{
 .popular-products li .price-number p span.line-through{
 	text-decoration:line-through;
 	color:#1594CF;
+	font-size: 0.75em;
+	font-weight: bold;
 }
 .preview-page{
 	padding:2% 0;
@@ -1415,7 +1451,7 @@ div.right-ribbon{
    	 margin-top:15px;
    }
    .content_top{
-   	padding:1em 0;
+   	padding:0em 0;
    }
    .add-banner{
    	 padding:1% 5%;
@@ -1521,7 +1557,7 @@ div.right-ribbon{
     .ocarousel_window_slides a{
     	padding:0 20px;
     }
-    .movie_block{
+    .product_block{
     	width:44.72%;
     }
     .copy_right,.footer-nav{

@@ -3,6 +3,7 @@
 
  		{{> header}}
   		<a href="#" id="toTop"> </a>
+  		{{>yield "bodyheader"}}
  		{{>yield}}
     {{>footer}}
     
@@ -36,23 +37,26 @@
            			 <li>
               			<a href="{{pathFor 'home'}}">Home</a>
             		</li>
-            		<li  class="test">
-              			<a href="#">Peliculas </a>
-            		</li>
-           			 <li>
-             			 <a href="#">Próximos estrenos</a>
-            		</li>
-           			 <li>
-              			<a href="#"> Series </a>
+            		<li>
+              			<a href="{{pathFor 'productos'}}">Últimos productos</a>
             		</li>
             		<li>
-              			<a href="#"> Trailers </a>
+              			<a href="/productos/peliculas">Películas</a>
             		</li>
            			 <li>
-             			 <a href="{{pathFor 'contact'}}">Contáctenos </a>
+             			 <a href="{{pathFor 'estrenos'}}">Próximos estrenos</a>
+            		</li>
+           			 <li>
+              			<a href="{{pathFor 'series'}}">Series</a>
+            		</li>
+            		<li>
+              			<a href="{{pathFor 'trailers'}}">Trailers</a>
+            		</li>
+           			 <li>
+             			 <a href="{{pathFor 'contact'}}">Contáctenos</a>
             		</li>
                 <li>
-                   <a href="{{pathFor 'login'}}"> Iniciar Sesión </a>
+                   <a href="{{pathFor 'login'}}">Iniciar Sesión</a><!--MOVER-->
                  </li>
                     	
                     

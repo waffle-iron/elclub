@@ -2,9 +2,9 @@ var productSeeds = [
 
 {
 	sku: 'civil-war',
-	id: '1',
+	tipo:'peliculas',id: '1',
 	title: 'Civil War',
-	price: '8523',
+	price: '852.35',
 	image: 'product-img5.jpg',
 	prota: 'Tom Cruise, Jeremy Renner',
 	dura: '131 min.',
@@ -13,96 +13,96 @@ var productSeeds = [
 },
 {
 	sku: 'transformers',
-	id: '2',
+	tipo:'peliculas',id: '2',
 	title: 'Transformers',
 	image: 'product-img6.jpg',
-	price: 'Bolivares'
+	price: '749.99'
 },
 
 {
 	sku: 'the-matrix',
-	id:'3',
+	tipo:'peliculas',id:'3',
 	title: 'The Matrix',
 	image: 'product-img3.jpg',
-	price:'$839.93',
-	previous_price: '$899.95',
+	price:'839.93',
+	previous_price: '899.95',
 	popularity: '2'
 },
 
 {
 	sku: 'si-decido-quedarme',
-	id:'4',
+	tipo:'peliculas',id:'4',
 	title: 'Si decido quedarme',
 	image: 'product-img4.jpg',
-	price:'$839.93',
-	previous_price: '$899.95',
+	price:'839.93',
+	previous_price: '899.95',
 	popularity: '3'
 },
 
 {
 	sku: 'tmnt',
-	id:'5',
+	tipo:'peliculas',id:'5',
 	title: 'Tortugas Ninja',
 	image: 'product-img1.jpg',
-	price:'$839.93'
+	price:'839.93'
 },
 
 {
 	sku: 'tarzan',
-	id:'6',
+	tipo:'peliculas',id:'6',
 	title:'Tarzan',
 	image:'product-img2.jpg',
-	price:'$839.93',
-	previous_price: '$899.95',
+	price:'839.93',
+	previous_price: '899.95',
 	popularity: '4'
 },
 
 {
 	sku: 'ex-machina',
-	id:'7',
+	tipo:'peliculas',id:'7',
 	title:'Ex Machina',
 	image: 'product-img7.jpg',
-	price: '$839.93'
+	price: '839.93'
 },
 
 {
 	sku: 'cautivos',
-	id:'8', 
+	tipo:'peliculas',id:'8', 
 	title: 'Cautivos',
 	image: 'product-img8.jpg',
-	price: '$839.93'
+	price: '839.93'
 },
 
 {
 	sku: 'pi',
-	id:'9',
+	tipo:'peliculas',id:'9',
 	title: 'Secret Life of Pets',
 	image:'product-img9.jpg',
-	price: '$839.93'
+	price: '839.93'
 },
 
 {
 	sku: 'dory',
-	id:'10',
+	tipo:'peliculas',id:'10',
 	title: 'Buscando a Dory',
 	image: 'product-img10.jpg',
-	price: '$839.93'
+	price: '839.93'
 },
 
 {
 	sku: 'star-wars',
-	id: '11',
+	tipo:'peliculas',id: '11',
 	title: 'Star Wars',
 	image:'product-img11.jpg',
-	price:'$839.93'
+	price:'839.93'
 },
 
 {
 	sku: 'zootopia',
-	id:'12',
+	tipo:'peliculas',id:'12',
 	title: 'Zootopia',
 	image:'product-img12.jpg',
-	price:'$839.93'
+	price:'839.93'
 }
 ];
 
