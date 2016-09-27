@@ -106,6 +106,8 @@ var productSeeds = [
 }
 ];
 
+
+
 Products.remove({});
 
 if (Products.find().count() === 0) {

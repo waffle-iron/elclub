@@ -17,11 +17,11 @@ Template.cartShow.helpers({
     return items.length == 0;
   }
 });
-
-Template.carShow.onCreated(function(){
+/*
+Template.cartShow.onCreated(function(){
   this.subscribe("cart");
 })
-
+*/
 Template.cartShow.events({
   "click .remove-from-cart" : function(ev){
     ev.preventDefault();

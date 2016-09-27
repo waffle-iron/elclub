@@ -1,5 +1,6 @@
 Router.configure({
 	layoutTemplate: "baseLayout",
+  //loadingTemplate: 'loading',
 	notFoundTemplate: '404',
 	waitOn : function(){
     return [Meteor.subscribe("postsApproved"),
@@ -11,29 +12,8 @@ Router.route('/cart', { name: "cartShow"});
 
 // Router.route('/datos', { name: "datos"}); <<<--- POR HACER
 
-// Router.route('/datos', { name: "datos"}); <<<--- GRACIAS POR SU COMPRA
+// Router.route('/compra', { name: "compra"}); <<<--- GRACIAS POR SU COMPRA
 
-/*
-Router.configure({
-  layoutTemplate : 'layout',
-  loadingTemplate: 'loading',
-  notFoundTemplate: 'notFound',
-  waitOn : function(){
-    return [Meteor.subscribe("vendors"),
-      Meteor.subscribe("cart", userKey)];
-  }
-});
-//*/
-/*Router.route('/home', {
-
-	name: "home",
-	date:{
-		posts: function()
-		{
-			return Post.find();
-	    }
-	}   
-});-*/
 
 Router.route("/", {
 	
@@ -42,6 +22,8 @@ Router.route("/", {
   
 	  waitOn : function(){
 	     
+      console.log("Todo bien")
+
 	    Sistema.categoria = "Las mejores series y películas" 
 	     
 	    return Meteor.subscribe("products");
@@ -83,41 +65,6 @@ Router.route('/contact', {
 	 	}
 	 }
 });
-
-/* ABOUT + PRODUCTOS[id]
-
-Router.route('/about', function () {
-  this.render('about');
-});
-
-Router.route('/products/:id', function () {
-  var that = this;
-  var product = _.find(Products, function(prod) {
-    return (prod.id === that.params.id);
-  });
-  this.render('productDetail', {
-    data: product
-  });
-});
-
-/*
-
-Router.route('/preview/:sku', function() {
-
-	var that = this;
-	var pelicula = _.find( Products, function(prod){
-			return (prod.sku === that.params.sku);
-		});
-
-	console.log(that.params.sku);
-
-	this.render('productDetail',{
-		data: pelicula,
-	});
-
-});
-
-*/
 
 
 Router.route("/p/:mysku", {
