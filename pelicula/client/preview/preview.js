@@ -73,8 +73,8 @@ Template.productDetail.rendered = function(){
 Template.productDetail.events({
   "click #add-to-cart" : function(ev){
     ev.preventDefault();
-    console.log(this );
-    console.log("EL SKU AHORA MISMO ES: " + this.sku );
+    /*console.log(this );
+    console.log("EL SKU AHORA MISMO ES: " + this.sku );*/
     addToCart(this.sku, function(err,res){
       if(err){
         console.log(err);

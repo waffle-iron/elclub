@@ -1,11 +1,11 @@
 Carts = new Mongo.Collection("carts");
 
-Carts.getCart = function(userKey){
+Carts.getCart = function(myuserKey){
 
-  var cart = Carts.findOne({userKey : userKey});
+  var cart = Carts.findOne({userKey : myuserKey});
   if(!cart){
     cart = {
-      userKey : userKey,
+      userKey : myuserKey,
       email : null,
       name :null,
       ip : null,

@@ -3,10 +3,24 @@ Template.cartShow.helpers({
     currentCart = Carts.getCart(userKey);
     return currentCart;
   },
+  cartitems : function(){
+    currentCart = Carts.getCart(userKey);
+    console.log(userKey)
+    console.log(currentCart)
+    return currentCart.items;
+  },
+  carttotal : function(){
+    currentCart = Carts.getCart(userKey);
+    return currentCart.total;
+  },
   thereAreNo : function(items){
     return items.length == 0;
   }
 });
+
+Template.carShow.onCreated(function(){
+  this.subscribe("cart");
+})
 
 Template.cartShow.events({
   "click .remove-from-cart" : function(ev){

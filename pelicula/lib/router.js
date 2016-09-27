@@ -1,12 +1,29 @@
 Router.configure({
 	layoutTemplate: "baseLayout",
 	notFoundTemplate: '404',
-	waitOn: function() 
-	{
-		return Meteor.subscribe("postsApproved");
-	}
+	waitOn : function(){
+    return [Meteor.subscribe("postsApproved"),
+      Meteor.subscribe("cart", userKey)];
+  },
 });
 
+Router.route('/cart', { name: "cartShow"});
+
+// Router.route('/datos', { name: "datos"}); <<<--- POR HACER
+
+// Router.route('/datos', { name: "datos"}); <<<--- GRACIAS POR SU COMPRA
+
+/*
+Router.configure({
+  layoutTemplate : 'layout',
+  loadingTemplate: 'loading',
+  notFoundTemplate: 'notFound',
+  waitOn : function(){
+    return [Meteor.subscribe("vendors"),
+      Meteor.subscribe("cart", userKey)];
+  }
+});
+//*/
 /*Router.route('/home', {
 
 	name: "home",
@@ -54,8 +71,6 @@ Router.route('/p', {
 	    }
 	}   
 });
-
-Router.route('/cart', { name: "cartShow"});
 
 Router.route('/login', { name: "login"});
 
@@ -115,15 +130,18 @@ Router.route("/p/:mysku", {
   
   data : function(){
     return Products.findOne({sku : this.params.mysku});
-  }
-  
+  },
+  /*
+  yieldRegions: {
+    'empty': {to: 'bodyheader'},
+  	},
+  */
 });
 
 Router.route("/productos/", {
 	
   name : "productos",
   
-  template: "bodyProductos",
   
   waitOn : function(){
     return Meteor.subscribe("products");
@@ -132,6 +150,12 @@ Router.route("/productos/", {
   data : function(){
     return Products.find({} , {"sort" : ['sku', 'asc']} );
   },
+  
+  template: "bodyProductos",
+  
+  yieldRegions: {
+    'empty': {to: 'bodyheader'},
+  	},
 	  
 });
 

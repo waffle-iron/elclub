@@ -28,6 +28,7 @@ if(Meteor.isServer){
   Meteor.methods({
     //getcart
     getCart : function(userKey){
+      console.log(userKey)
       check(userKey, String);
       return Carts.getCart(userKey);
     },
@@ -51,22 +52,25 @@ if(Meteor.isServer){
     addToCart : function(userKey, sku){
       check(userKey, String);
       check(sku, String);
+      console.log(sku);
       var cart = Meteor.call("getCart", userKey);
       //get the item in the cart
       var found = _.find(cart.items, function(item){
         return item.sku === sku;
       });
+      console.log(cart);
 
       if(found){
         found.quantity++;
       }else{
         //add the item
         var product = Products.bySku(sku);
+        console.log(product);
         var item = {
           sku : product.sku,
-          name : product.name,
+          name : product.title,
           price : product.price,
-          description : product.summary,
+          description : product.descrip,
           image : product.image,
           discount : 0,
           added_at : new Date(),
