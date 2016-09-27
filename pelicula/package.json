@@ -5,6 +5,7 @@
     "start": "meteor run"
   },
   "dependencies": {
+    "amazon-product-api": "^0.4.2",
     "bcrypt": "^0.8.7",
     "massive": "2.0.4",
     "meteor-node-stubs": "~0.2.0",

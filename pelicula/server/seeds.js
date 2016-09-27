@@ -1,3 +1,44 @@
+/*
+var consulta = client.itemSearch({
+  searchIndex: 'DVD',
+  audienceRating: 'R',
+})
+*/
+
+/*   //////TRABAJANDO AQUI/////////////
+
+console.log("Amazon API: ");
+
+productosdeamazon = client.itemSearch({
+  director: 'Quentin Tarantino',
+  actor: 'Samuel L. Jackson',
+  searchIndex: 'DVD',
+  audienceRating: 'R',
+  responseGroup: 'ItemAttributes,Offers,Images'
+})
+.then(function(results){
+	console.log(results);
+	return results;
+})
+.catch(function(err){console.log(err)});
+
+var productSeeds;
+
+for (var i = productosdeamazon.length - 1; i >= 0; i--) {
+	productosdeamazon[i]
+}
+{
+	item = {
+		sku: elemento[i].Especificacion.sku,
+		image: productosdeamazon[i].LargeImage[0].URL,
+		large-image: productosdeamazon[i].LargeImage[0].URL,
+	};
+
+	productSeeds.insert(item)
+} //*/
+
+//console.log(consulta);
+/*
 var productSeeds = [
 
 {
@@ -105,7 +146,7 @@ var productSeeds = [
 	price:'839.93'
 }
 ];
-
+*/
 
 
 Products.remove({});
