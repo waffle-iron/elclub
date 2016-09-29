@@ -8,11 +8,13 @@ Products.bySku = function(sku){
   return Products.findOne({sku : sku});
 };
 
+/*
 Products.featured = function(){
   var featuredids = ["honeymoon-mars","johnny-liftoff","one-way-reentry"];
   return Products.find({id : {$in : featuredids}},
     {fields : {inventory : false, cost : false}});
 };
+//*/
 
 Products.allow({
   update : function(userid, product){

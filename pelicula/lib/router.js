@@ -24,7 +24,7 @@ Router.route("/", {
 	     
       console.log("Todo bien")
 
-	    Sistema.categoria = "Las mejores series y películas" 
+	    Elements.categoria = "Las mejores series y películas" 
 	     
 	    return Meteor.subscribe("products");
 	  },
@@ -118,7 +118,7 @@ Router.route("/productos/:type", {
 	    var str = String(this.params.type);
 	    str = str.split("-").join(" ");
 	    console.log(str);
-        Sistema.categoria = str.charAt(0).toUpperCase() + str.slice(1);
+        Elements.categoria = str.charAt(0).toUpperCase() + str.slice(1);
      }
      
     return Meteor.subscribe("products");

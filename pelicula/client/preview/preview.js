@@ -47,15 +47,15 @@ Template.tabs.events({
 Template.productDetail.helpers({
 	
 	specification: function() {
-		return Products.findOne({sku : this.params.mysku});//Sistema.Peliculas.get;//(0,1,sku);
+		return Products.findOne({sku : this.params.mysku});
 	}
 
 })
 
 Template.masPopulares.helpers({
 	peliculasMasPopulares: function(){
-		return Products.find({});//	return Sistema.Peliculas.get(0,20,"popularity"); 
-	},//Sistema.Peliculas.get(0,20,"popularity")
+		return Products.find({});
+	},
 })
 /*
 Template.review.rendered({

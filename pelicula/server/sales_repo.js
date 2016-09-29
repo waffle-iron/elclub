@@ -7,7 +7,7 @@ Meteor.startup(function(){
     });
 
     db = connected.result;
-    console.log("The DB is : ", db);
+    console.log("The DB is: ", db);
     this.saveCheckout = function(checkout){
       var saved = Async.runSync(function(done){
         db.checkouts.save(checkout, function(err,res){
@@ -15,7 +15,7 @@ Meteor.startup(function(){
             console.log(err);
             done(null,{success : false, message : err});
           }else{
-            done(null,{success : true, message : "Thank you for your purchase!", receipt_id : checkout.reference_key});
+            done(null,{success : true, message : "Gracias por su compra!", receipt_id : checkout.reference_key});
           }
         });
       });

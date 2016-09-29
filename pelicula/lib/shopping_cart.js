@@ -1,6 +1,4 @@
 if(Meteor.isClient){
-
-
   //the cart relies on this global key, which could be a problem!
   //refactor as you see fit!
   userKey = localStorage.getItem("user_key");

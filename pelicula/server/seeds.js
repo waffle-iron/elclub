@@ -38,7 +38,7 @@ for (var i = productosdeamazon.length - 1; i >= 0; i--) {
 } //*/
 
 //console.log(consulta);
-/*
+
 var productSeeds = [
 
 {
@@ -146,7 +146,7 @@ var productSeeds = [
 	price:'839.93'
 }
 ];
-*/
+//*/
 
 
 Products.remove({});
@@ -169,5 +169,12 @@ if(Meteor.users.find().count() === 0){
   });
 
   Roles.addUsersToRoles(id, ["Administrator"]);
-  console.log("Added Admin user...");
+  console.log("Agregado Admin");
 }
+
+////***FEEDS***////
+
+Meteor.startup( function(){
+    Feeds.reload();
+    console.log("feeds reinitialized");
+});

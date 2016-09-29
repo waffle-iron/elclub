@@ -10,5 +10,26 @@
     "massive": "2.0.4",
     "meteor-node-stubs": "~0.2.0",
     "stripe": "3.3.4"
-  }
+  },
+  "version": "1.0.0",
+  "description": "Proyecto de comercio electrónico, venta de películas y series en formato físico",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisaguirre027/elclub.git"
+  },
+  "keywords": [
+    "películas",
+    "series",
+    "blu-ray",
+    "entretenimiento",
+    "movies",
+    "entertainment"
+  ],
+  "author": "Aguirre Luis, Melean José, Pernía Jesús, Rivas María",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luisaguirre027/elclub/issues"
+  },
+  "homepage": "https://github.com/luisaguirre027/elclub#readme"
 }
