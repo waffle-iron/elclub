@@ -21,9 +21,7 @@ Router.route("/", {
 		name : "home",
   
 	  waitOn : function(){
-	     
-      console.log("Todo bien")
-
+	    
 	    Elements.categoria = "Las mejores series y películas" 
 	     
 	    return Meteor.subscribe("products");
