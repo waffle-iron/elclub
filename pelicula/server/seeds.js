@@ -1,43 +1,50 @@
-/*
-var consulta = client.itemSearch({
-  searchIndex: 'DVD',
-  audienceRating: 'R',
-})
-*/
 
 /*   //////TRABAJANDO AQUI/////////////
+ Your request should have atleast 1 of the following parameters: 
+'Keywords','Title','Power','BrowseNode','Artist','Author','Actor',
+'Director','AudienceRating','Manufacturer','MusicLabel','Composer',
+'Publisher','Brand','Conductor','Orchestra','TextStream','Cuisine',
+'City','Neighborhood'.*/
 
-console.log("Amazon API: ");
-
-productosdeamazon = client.itemSearch({
+/*
+client.itemSearch({
   director: 'Quentin Tarantino',
   actor: 'Samuel L. Jackson',
   searchIndex: 'DVD',
   audienceRating: 'R',
   responseGroup: 'ItemAttributes,Offers,Images'
-})
-.then(function(results){
-	console.log(results);
-	return results;
-})
-.catch(function(err){console.log(err)});
+}).then(function(results){
+	
+	for (var i = 0; i < 2; i++) { //results.length
+		toInsert.push({
 
-var productSeeds;
+			sku: results[i].ASIN[0],
+			title: results[i].ItemAttributes[0].Title[0],
+			//duracion: results[i].ItemAttributes[0].RunningTime[0],
+			prota: results[i].ItemAttributes[0].Actor,
+			clasificacion: results[i].ItemAttributes[0].AudienceRating[0],
+			genero: results[i].ItemAttributes[0].Genre,
+			tipo: results[i].ItemAttributes[0].ProductGroup[0],
+			price: results[i].OfferSummary[0].LowestNewPrice[0].Amount[0],
+			image: results[i].SmallImage[0].URL[0],
+			imageMedium: results[i].MediumImage[0].URL[0]
+		
+		})
+	}
+	
+    Products.remove({});
 
-for (var i = productosdeamazon.length - 1; i >= 0; i--) {
-	productosdeamazon[i]
-}
-{
-	item = {
-		sku: elemento[i].Especificacion.sku,
-		image: productosdeamazon[i].LargeImage[0].URL,
-		large-image: productosdeamazon[i].LargeImage[0].URL,
-	};
+	if (Products.find().count() === 0) {
+    
+    	for (var i = 0; i < toInsert.length; i++) {
+        	Products.insert(toInsert[i]);
+        	console.log("Inserted ", toInsert[i].title);
+    	}
+	}
 
-	productSeeds.insert(item)
-} //*/
-
-//console.log(consulta);
+}).catch(function(err){
+  console.log(err);
+});*/
 
 var productSeeds = [
 
