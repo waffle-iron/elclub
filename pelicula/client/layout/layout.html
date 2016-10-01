@@ -15,20 +15,33 @@
   <div class="header">
      <div class="wrap">
         <div class="header_top">
-          	<div class="logo">
-            	<a href="{{pathFor 'home'}}"><img src="images/logo9.png" alt="" /></a>
-          	</div>
-          	
-          	
-          	<div class="header_top_right">
-                <div class="search_box">
+            
+            <div class="col-xs-12 col-md-4">
+                <div class="logo">
+            	    <a href="{{pathFor 'home'}}"><img src="images/logo9.png" alt="" /></a>
+          	    </div>
+            </div>
+            
+            <div class="col-xs-12 col-md-4">
+                
+                <div class="search_box header_top_content">
                   	<span> Buscar</span>
                   		<form>
                     		<input type="text" value=""><input type="submit" value="">
                   		</form>
                  	 <div class="clear"></div>
                 </div>
-         	</div>
+         	
+            </div>
+            
+            <div class="col-xs-12 col-md-4">
+                <div class="pull-right small-button login-button">
+                    <a class="primary-button " href="{{pathFor 'login'}}"> <i class="fa fa-user" aria-hidden="true"></i> Iniciar Sesión</a><!--MOVER-->
+                </div>
+            </div>
+          	
+          	
+          	
           	<div class="clear"></div>
         </div>     
          <div class="navigation">
@@ -55,9 +68,6 @@
            			 <li>
              			 <a href="{{pathFor 'contact'}}">Contáctenos</a>
             		</li>
-                <li>
-                   <a href="{{pathFor 'login'}}">Iniciar Sesión</a><!--MOVER-->
-                 </li>
                     	
                     
          		 </ul>

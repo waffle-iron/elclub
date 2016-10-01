@@ -34,7 +34,7 @@
              </div>  
            </div>       
         </div-->
-        <div class="content_bottom">
+        <div class="padding-horizontal content_bottom">
           <div class="wrap">
             <div class="content-bottom-left">
               {{>categorias}}
@@ -67,15 +67,15 @@
 
 <template name="peliculasCard">
 
-  <div class="col-sm-3 grid_1_of_4 product_block">
+  <div class="grid_1_of_4 product_block">
     <h4><a href="/p/{{sku}} "> {{title}} </a> </h4>
     <a href="#"> <img src="/images/{{image}}" alt="" /></a>
       <div class="price-details">
         <div class="price-number">
           <p><span class="bolivares">{{price}}</span></p>
         </div>
-        <div class="add-cart">                
-          <h4><a href="/p/{{sku}}">Mas detalles</a></h4>
+        <div class="small-button add-cart">                
+          <a class="primary-button" href="/p/{{sku}}">COMPRAR</a>
         </div>
     <div class="clear"></div>
       </div>           
@@ -86,7 +86,7 @@
 <template name="lasMasPopulares">
   
 
-    <div class="section group">
+    <div class="section-group">
         {{#each productos}}
             {{ > peliculasCard this}}
         {{/ each}}
@@ -138,7 +138,7 @@
 
 <template name="unDato">
   <div class="buters-guide">
-    <h3>UN DATO</h3>
+    <h3>Un dato</h3>
     <p><span>Queremos que usted esté satisfecho con su compra.</span></p> 
     <p> Las películas y la televisión son nuestra pasión y estamos orgullosos de ofrecer una increíble selección de más de 500.000 títulos a precios increíbles. Con todo, desde los nuevos lanzamientos más calientes para 2015, más vendidos clásicos, y las mejores ofertas de hoy, usted encontrará sus favoritos aquí en El club de la Película.  </p>
   </div>  
@@ -167,11 +167,11 @@
 <template name="proxEstrenos">
   <div class="header">
      <div class="wrap">
-        <div class="header_bottom">
+        <div class="header_bottom padding-horizontal">
           <div class="slider-text">
               <h2>Próximamente<br/>Batman v Superman: Dawn Of Justice</h2>
               <p>Desde el director Zack Snyder viene Batman v Superman: El origen de Justicia, protagonizada por Ben Affleck como Batman y Henry Cavill como Superman en primera pareja en la pantalla grande de los personajes.</p>
-              <a href="#">Compralo ahora </a>
+              <a class="primary-button" href="#">COMPRALO AHORA</a>
           </div>
         <div class="slider-img">
               <img src="images/bvs.jpg" alt="" />
