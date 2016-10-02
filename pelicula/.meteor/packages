@@ -38,3 +38,4 @@ npm-container
 alanning:roles
 underscore
 fortawesome:fontawesome
+percolate:synced-cron

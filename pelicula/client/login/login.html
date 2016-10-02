@@ -9,32 +9,37 @@
     <div class="panel panel-default userBox">
       <div class="panel-body">
         {{# if currentUser}}
-        
-        <p>Hola! <strong>{{currentUser.username}}</strong>, bienvenido a El Club de la Película!</p>
+        <div class=" logout">
+                  <p>Hola! <strong>{{currentUser.username}}</strong>, bienvenido a El Club de la Película!</p>
+        <button type="button" class="btn btn-info fullbutton" id="logout">Desconectar</button>  
+        </div>
+
 
         {{else}}
-        
+
+        <div class="login">
         <h4>Ingresa a tu cuenta</h4>
         <div class="form-group">
-          <input class="form-control input-sm" id="login-username" placeholder="Correo">
+          <input class="form-control input-sm" id="login-username" placeholder="Usuario">
           <input class="form-control input-sm" id="login-password" placeholder="Contraseña" type="password">
         </div>
 
         <button type="button" class="btn btn-info fullbutton login" id="login">Acceder</button>
 
-
-       
-        <h4>Registratte aqui</h4>
-        <div class="form-group">
-          <input class="form-control input-sm" id="signup-username" placeholder="Correo">
-          <input class="form-control input-sm" id="signup-password" placeholder="Contraseña" type="password">
         </div>
 
-        <button type="button" class="btn btn-info fullbutton" id="signup">Regístrate</button>
+        <div class="register">
+            <h4>Registratte aqui</h4>
+            <div class="form-group">
+              <input class="form-control input-sm" id="signup-username" placeholder="Usuario">
+              <input class="form-control input-sm" id="signup-password" placeholder="Contraseña" type="password">
+              </div>
+           <button type="button" class="btn btn-info fullbutton" id="signup">Regístrate</button>
+        </div>
         {{/if}}
 
       </div>
-      <button type="button" class="btn btn-info fullbutton" id="logout">Desconectar</button>  
+      
     </div>
   </div>
 </template>

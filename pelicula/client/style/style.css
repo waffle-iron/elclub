@@ -801,6 +801,7 @@ div.section-group    {
 .footer {
 	background:#1594CF;
 	padding:3% 0;
+
 }
 .footer-nav{
 	float:right;
@@ -1731,10 +1732,7 @@ div.section-group    {
    }
 }
 
-.tweetbox-container {
-  margin: 30px;
-  margin-left: 10px;
-}
+
 
 .tweetbox,.userBox {
   background-color: rgb(240, 247, 254);
@@ -1770,4 +1768,8 @@ div.section-group    {
 
 .user-container .login {
   margin-bottom: 15px;
+  margin-right:auto;
 }
+
+
+
