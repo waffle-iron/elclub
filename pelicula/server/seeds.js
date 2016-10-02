@@ -7,44 +7,72 @@
 'City','Neighborhood'.*/
 
 /*
-client.itemSearch({
-  director: 'Quentin Tarantino',
-  actor: 'Samuel L. Jackson',
-  searchIndex: 'DVD',
-  audienceRating: 'R',
-  responseGroup: 'ItemAttributes,Offers,Images'
-}).then(function(results){
-	
-	for (var i = 0; i < 2; i++) { //results.length
-		toInsert.push({
-
-			sku: results[i].ASIN[0],
-			title: results[i].ItemAttributes[0].Title[0],
-			//duracion: results[i].ItemAttributes[0].RunningTime[0],
-			prota: results[i].ItemAttributes[0].Actor,
-			clasificacion: results[i].ItemAttributes[0].AudienceRating[0],
-			genero: results[i].ItemAttributes[0].Genre,
-			tipo: results[i].ItemAttributes[0].ProductGroup[0],
-			price: results[i].OfferSummary[0].LowestNewPrice[0].Amount[0],
-			image: results[i].SmallImage[0].URL[0],
-			imageMedium: results[i].MediumImage[0].URL[0]
-		
-		})
-	}
-	
-    Products.remove({});
-
-	if (Products.find().count() === 0) {
+SyncedCron.add({
+  name: 'Catalog Update',
+  schedule: function(parser) {
+    // parser is a later.parse object
+    return parser.recur().on('22:50:00').time();//actualizar en esta hora
+  },
+  job: function() {
     
-    	for (var i = 0; i < toInsert.length; i++) {
-        	Products.insert(toInsert[i]);
-        	console.log("Inserted ", toInsert[i].title);
-    	}
-	}
+  	var toInsert = new Array();//se crea toInsert como un objeto Array()
+  	client.itemSearch({
+  	director: 'Quentin Tarantino',
+  	actor: 'Samuel L. Jackson',
+  	searchIndex: 'DVD',
+  	audienceRating: 'R',
+  	responseGroup: 'ItemAttributes,Offers,Images, EditorialReview'
+	}).then(function(results){ //cuando se termina de hacer la busqueda entra aqui
+	
+		for (var i = 0; i < 6; i++) { //deberia ser el tamño de los resultados: results.length
+		
+			if(results[i].EditorialReviews==undefined||results[i].ItemAttributes[0].Title[0]==undefined||
+			results[i].ItemAttributes[0].RunningTime[0]['_']==undefined||results[i].ItemAttributes[0].Actor==undefined||
+			results[i].ItemAttributes[0].AudienceRating[0]==undefined||results[i].ItemAttributes[0].Genre==undefined||
+			results[i].ItemAttributes[0].ProductGroup[0]==undefined||results[i].OfferSummary[0].LowestNewPrice[0].Amount[0]==undefined||
+			results[i].SmallImage[0].URL[0]==undefined||results[i].ImageSets[0].ImageSet[0].HiResImage[0].URL[0]==undefined||
+			results[i].MediumImage[0].URL[0]==undefined)
+				continue;
+			
+			toInsert.push({ 
+		
+				sku: results[i].ASIN[0],
+				title: results[i].ItemAttributes[0].Title[0],
+				duracion: results[i].ItemAttributes[0].RunningTime[0]['_'],
+				prota: results[i].ItemAttributes[0].Actor,
+				clasificacion: results[i].ItemAttributes[0].AudienceRating[0],
+				genero: results[i].ItemAttributes[0].Genre,
+				tipo: results[i].ItemAttributes[0].ProductGroup[0],
+				price: results[i].OfferSummary[0].LowestNewPrice[0].Amount[0],
+				image: results[i].SmallImage[0].URL[0],
+				descrip: results[i].EditorialReviews[0].EditorialReview[0].Content[0],
+				hiResImage: results[i].ImageSets[0].ImageSet[0].HiResImage[0].URL[0],
+				imageMedium: results[i].MediumImage[0].URL[0]
+		
+			})
+		}
+	
+    	//Products.remove({});//elimino todo de la base de datos
 
-}).catch(function(err){
-  console.log(err);
-});*/
+		//if (Products.find().count() === 0) {//si la bdd esta vacía
+    
+    		for (var i = 0; i < toInsert.length; i++) {//se insertan los productos en toInsert en una coleccion de mongo
+        		Products.insert(toInsert[i]);
+        		console.log("Inserted ", toInsert[i].title);
+    		}
+		//}
+
+	}).catch(function(err){
+  		console.log(err);
+});
+
+
+  }
+
+  
+});
+ SyncedCron.start();
+*/
 
 var productSeeds = [
 
