@@ -8,8 +8,9 @@
   <div class="user-container">
     <div class="panel panel-default userBox">
       <div class="panel-body">
+        <div class="user">
         {{# if currentUser}}
-        <div class=" logout">
+        <div class="hello-user">
                   <p>Hola <strong>{{currentUser.username}}</strong>, bienvenido a El Club de la Película</p>
                   <p><a href="{{pathFor 'home'}}">Volver a la tienda</a></p>
         <button type="button" class="btn btn-info fullbutton" id="logout">Desconectar</button>  
@@ -30,15 +31,15 @@
         </div>
 
         <div class="register">
-            <h4>Registratte aqui</h4>
+            <h4>Registrate</h4>
             <div class="form-group">
               <input class="form-control input-sm" id="signup-username" placeholder="Usuario">
               <input class="form-control input-sm" id="signup-password" placeholder="Contraseña" type="password">
               </div>
            <button type="button" class="btn btn-info fullbutton" id="signup">Regístrate</button>
-        </div>
+        
         {{/if}}
-
+        </div>
       </div>
       
     </div>

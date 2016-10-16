@@ -57,7 +57,7 @@ body {
 }
 .header_top {
 	padding-bottom:0;
-	height: 100px;
+	/*height: 90px;*/
 	padding-left:30px;
 	padding-right:30px;
 }
@@ -65,12 +65,12 @@ body {
 	float: left;
 }
 .logo img{
-	margin-top: 10px;
-	max-height: 80px;
+	margin-top: 2px;
+	max-height: 40px;
 }
 
 .header_top_content{
-	margin: 40px auto;
+	margin: 5px auto;
 	margin-bottom: 0;
 }
 .search_box span{
@@ -84,8 +84,21 @@ body {
 	 padding-left:18px;
 	 border-radius: 30px;
 }
-.login-button{
-	
+
+.login-button {
+	margin-top:1px;
+	margin-bottom: 5px;
+}
+
+.login-button a:hover{
+	background:#1594CF ;
+	color: #23272a;
+}
+
+.login-button a{
+	background: #23272a; 
+    /*border: 3px solid black;*/
+    color: #1594CF;
 }
 /*
 .search_box form:after{
@@ -749,20 +762,7 @@ div.section-group    {
     position: relative;
 }
 
-.login-button {
-	margin-top:40px;
-}
 
-.login-button a:hover{
-	background:#1594CF ;
-	color: #23272a;
-}
-
-.login-button a{
-	background: #23272a; 
-    /*border: 3px solid black;*/
-    color: #1594CF;
-}
 
 .add-cart a{
 	background: #1594CF; 
@@ -1738,8 +1738,7 @@ div.section-group    {
   background-color: rgb(240, 247, 254);
   line-height: 2.4em;
 	padding: 0.5em 1.1em 0.5em 1.5em;
-	
-	width: 1180px;
+
 	z-index: 500;
 	
 	border-radius: 3px;
@@ -1750,8 +1749,9 @@ div.section-group    {
 
 
 .user-container {
-  margin-top: 30px;
-  margin-left: 130px;
+	width: 50%;
+  margin: 30px auto;
+  
 }
 
 .user-container h4 {
