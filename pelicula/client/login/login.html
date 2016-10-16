@@ -19,26 +19,20 @@
         {{else}}
 
         <div class="login">
-        <h4>Ingresa a tu cuenta</h4>
-        <div class="form-group">
-          <input class="form-control input-sm" id="login-username" placeholder="Usuario">
-          <input class="form-control input-sm" id="login-password" placeholder="Contraseña" type="password">
+        <p class="text-center"> Ingresa a tu cuenta</p>
+        <div class="col-xs-14">
+          <input class="form-control input-lg" id="login-username" placeholder="Usuario">
+          <input class="form-control input-lg" id="login-password" placeholder="Contraseña" type="password">
         </div>
 
-        <button type="button" class="btn btn-info fullbutton login" id="login">Acceder</button>
-
+        <div class="button">
+          <button type="button" class="btn btn-info fullbutton login" id="login">Acceder</button>
         </div>
-
-        <div class="register">
-            <h4>Registratte aqui</h4>
-            <div class="form-group">
-              <input class="form-control input-sm" id="signup-username" placeholder="Usuario">
-              <input class="form-control input-sm" id="signup-password" placeholder="Contraseña" type="password">
-              </div>
-           <button type="button" class="btn btn-info fullbutton" id="signup">Regístrate</button>
+               
+                <a ng-href="" href=" ">¿Olvidaste tu nombre de usuario o contraseña?</a>
+                 <a ng-href="" href=" {{pathFor 'register'}}" > ¿Aún no tienes una cuenta? Regístrate aquí</a>
         </div>
         {{/if}}
-
       </div>
       
     </div>
