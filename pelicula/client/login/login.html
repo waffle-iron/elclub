@@ -1,6 +1,5 @@
 <template name="login">
 	{{> userManagement}}
-
 </template>
 
 <template name="userManagement">  
@@ -9,12 +8,8 @@
       <div class="panel-body">
         <div class="user">
         {{# if currentUser}}
-        <div class="hello-user">
-                  <p>Hola <strong>{{currentUser.username}}</strong>, bienvenido a El Club de la Película</p>
-                  <p><a href="{{pathFor 'home'}}">Volver a la tienda</a></p>
-        <button type="button" class="btn btn-info fullbutton" id="logout">Desconectar</button>  
-        </div>
-
+        
+        {{>mensajeDeBienvenida}}
 
         {{else}}
 
@@ -38,4 +33,14 @@
       </div>
     </div>
   </div>
+</template>
+
+<template name="mensajeDeBienvenida">
+  
+  <div class="hello-user">
+    <p>Hola <strong>{{currentUser.profile.nombre}}</strong>, bienvenido a El Club de la Película</p>
+    <p><a href="{{pathFor 'home'}}">Volver a la tienda</a></p>
+    <button type="button" class="btn btn-info fullbutton" id="logout">Desconectar</button>  
+  </div>
+  
 </template>

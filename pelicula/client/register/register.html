@@ -7,11 +7,8 @@
   <div class="user-container">
     <div class="panel panel-default userBox">
       <div class="panel-body">
-		{{# if currentUser}}
-       		 <div class=" logout">
-                  <p>Hola! <strong>{{currentUser.username}}</strong>, bienvenido a El Club de la Película!</p>
-        			<button type="button" class="btn btn-info fullbutton" id="logout">Desconectar</button>  
-        		</div>
+		    {{# if currentUser}}
+       		{{>mensajeDeBienvenida}} 
         {{else}}
        		<div class="register">
             	<p class="text-center"> Ingresa tus datos</p>
