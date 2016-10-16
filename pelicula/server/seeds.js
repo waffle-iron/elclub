@@ -78,7 +78,7 @@ var productSeeds = [
 
 {
 	sku: 'civil-war',
-	tipo:'peliculas',id: '1',
+	tipo:'películas',id: '1',
 	title: 'Civil War',
 	price: '852.35',
 	image: 'product-img5.jpg',
@@ -89,7 +89,7 @@ var productSeeds = [
 },
 {
 	sku: 'transformers',
-	tipo:'peliculas',id: '2',
+	tipo:'películas',id: '2',
 	title: 'Transformers',
 	image: 'product-img6.jpg',
 	price: '749.99'
@@ -97,7 +97,7 @@ var productSeeds = [
 
 {
 	sku: 'the-matrix',
-	tipo:'peliculas',id:'3',
+	tipo:'películas',id:'3',
 	title: 'The Matrix',
 	image: 'product-img3.jpg',
 	price:'839.93',
@@ -107,7 +107,7 @@ var productSeeds = [
 
 {
 	sku: 'si-decido-quedarme',
-	tipo:'peliculas',id:'4',
+	tipo:'películas',id:'4',
 	title: 'Si decido quedarme',
 	image: 'product-img4.jpg',
 	price:'839.93',
@@ -117,7 +117,7 @@ var productSeeds = [
 
 {
 	sku: 'tmnt',
-	tipo:'peliculas',id:'5',
+	tipo:'películas',id:'5',
 	title: 'Tortugas Ninja',
 	image: 'product-img1.jpg',
 	price:'839.93'
@@ -125,7 +125,7 @@ var productSeeds = [
 
 {
 	sku: 'tarzan',
-	tipo:'peliculas',id:'6',
+	tipo:'películas',id:'6',
 	title:'Tarzan',
 	image:'product-img2.jpg',
 	price:'839.93',
@@ -135,7 +135,7 @@ var productSeeds = [
 
 {
 	sku: 'ex-machina',
-	tipo:'peliculas',id:'7',
+	tipo:'películas',id:'7',
 	title:'Ex Machina',
 	image: 'product-img7.jpg',
 	price: '839.93'
@@ -143,7 +143,7 @@ var productSeeds = [
 
 {
 	sku: 'cautivos',
-	tipo:'peliculas',id:'8', 
+	tipo:'películas',id:'8', 
 	title: 'Cautivos',
 	image: 'product-img8.jpg',
 	price: '839.93'
@@ -151,7 +151,7 @@ var productSeeds = [
 
 {
 	sku: 'pi',
-	tipo:'peliculas',id:'9',
+	tipo:'películas',id:'9',
 	title: 'Secret Life of Pets',
 	image:'product-img9.jpg',
 	price: '839.93'
@@ -159,7 +159,7 @@ var productSeeds = [
 
 {
 	sku: 'dory',
-	tipo:'peliculas',id:'10',
+	tipo:'películas',id:'10',
 	title: 'Buscando a Dory',
 	image: 'product-img10.jpg',
 	price: '839.93'
@@ -167,7 +167,7 @@ var productSeeds = [
 
 {
 	sku: 'star-wars',
-	tipo:'peliculas',id: '11',
+	tipo:'películas',id: '11',
 	title: 'Star Wars',
 	image:'product-img11.jpg',
 	price:'839.93'
@@ -175,7 +175,7 @@ var productSeeds = [
 
 {
 	sku: 'zootopia',
-	tipo:'peliculas',id:'12',
+	tipo:'películas',id:'12',
 	title: 'Zootopia',
 	image:'product-img12.jpg',
 	price:'839.93'

@@ -10,7 +10,8 @@
       <div class="panel-body">
         {{# if currentUser}}
         <div class=" logout">
-                  <p>Hola! <strong>{{currentUser.username}}</strong>, bienvenido a El Club de la Película!</p>
+                  <p>Hola <strong>{{currentUser.username}}</strong>, bienvenido a El Club de la Película</p>
+                  <p><a href="{{pathFor 'home'}}">Volver a la tienda</a></p>
         <button type="button" class="btn btn-info fullbutton" id="logout">Desconectar</button>  
         </div>
 

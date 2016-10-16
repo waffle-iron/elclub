@@ -123,13 +123,14 @@ Router.route("/productos/:type", {
   },
   
   data : function(){
-    return Products.find({tipo : this.params.type})
+    return Products.find({ $or: [{tipo : this.params.type}, {genero : this.params.type}] })
   },
   
   title: ":type",
-  /*
   
-	  */
+  yieldRegions: {
+    'empty': {to: 'bodyheader'},
+  	},
 });
 
 

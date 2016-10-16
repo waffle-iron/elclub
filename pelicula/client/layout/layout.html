@@ -38,7 +38,15 @@
                 <div class="pull-right small-button login-button">
                   
                     
-                     <a class="primary-button " href="{{pathFor 'login'}}"> <i class="fa fa-user" aria-hidden="true"></i> Iniciar Sesion </a><!--MOVER-->
+                     <a class="primary-button " href="{{pathFor 'login'}}"> <i class="fa fa-user" aria-hidden="true"></i> 
+                     
+                     {{# if currentUser}}
+                         {{currentUser.username}}
+                    {{else}}
+                        Iniciar Sesión
+                    {{/if}}
+                     
+                     </a><!--MOVER-->
 
                 </div>
             </div>
@@ -57,7 +65,7 @@
               			<a href="{{pathFor 'productos'}}">Últimos productos</a>
             		</li>
             		<li>
-              			<a href="/productos/peliculas">Películas</a>
+              			<a href="/productos/películas">Películas</a>
             		</li>
            			 <li>
              			 <a href="{{pathFor 'estrenos'}}">Próximos estrenos</a>
