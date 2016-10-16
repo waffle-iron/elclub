@@ -1732,21 +1732,17 @@ div.section-group    {
    }
 }
 
-
-
-.tweetbox,.userBox {
+.userBox {
   background-color: rgb(240, 247, 254);
   line-height: 2.4em;
 	padding: 0.5em 1.1em 0.5em 1.5em;
 
 	z-index: 500;
 	
-	border-radius: 3px;
+	border-radius: 100px;
 	
 
 }
-
-
 
 .user-container {
 	width: 50%;
@@ -1755,20 +1751,50 @@ div.section-group    {
 }
 
 .user-container h4 {
-  color: gray;
+	font-size: 1em;
+  	color: black;
 }
 
+.user-container .fullbutton1 {
+  width: 100%;
+  text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #1594CF;
+    border-radius: 100px;
+
+}
 .user-container .fullbutton {
-  width: 10%;
+  width: 50%;
+  text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #1594CF;
+    border-radius: 100px;
+ 
 }
 
-.user-container .input-sm {
-  margin-bottom: 5px;
+.user-container .input-lg {
+  margin-bottom: 15px;
 }
 
 .user-container .login {
   margin-bottom: 15px;
   margin-right:auto;
+}
+
+.login{
+	width: 400px;
+  padding: 1em 3em;
+ margin: 1em 25%;
+}
+
+.register{
+	width: 400px;
+  padding: 1em 3em;
+ margin: 1em 25%;
 }
 
 

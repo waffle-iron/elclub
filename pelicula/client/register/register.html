@@ -1,3 +1,32 @@
 <template name = "register">
-	aqui va el registro.
+ {{>userManagement1}}
+
+</template>
+
+<template name="userManagement1">  
+  <div class="user-container">
+    <div class="panel panel-default userBox">
+      <div class="panel-body">
+		{{# if currentUser}}
+       		 <div class=" logout">
+                  <p>Hola! <strong>{{currentUser.username}}</strong>, bienvenido a El Club de la Película!</p>
+        			<button type="button" class="btn btn-info fullbutton" id="logout">Desconectar</button>  
+        		</div>
+        {{else}}
+       		<div class="register">
+            	<p class="text-center"> Ingresa tus datos</p>
+           		 <div class="col-xs-14">
+              	<input class="form-control  input-lg " id="signup-username" placeholder="Usuario">
+              	<input class="form-control  col-lg- input-lg " id="signup-fullname" placeholder="Nombre">
+              	<input class="form-control  col-lg- input-lg " id="signup-apellido" placeholder="Apellido">
+              	<input class="form-control  input-lg " id="signup-password" placeholder="Contraseña" type="password">
+              	<input class="form-control  col-lg- input-lg " id="signup-correo" placeholder="Correo">
+              	<input class="form-control  col-lg- input-lg " id="signup-direccion" placeholder="Dirección">
+             	 </div>
+           	<button type="button" class="btn btn-info fullbutton1" id="signup">Regístrate</button>
+        	</div> 
+            {{/if}}
+      </div>
+    </div>
+  </div>
 </template>
