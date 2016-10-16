@@ -1739,7 +1739,7 @@ div.section-group    {
 
 	z-index: 500;
 	
-	border-radius: 100px;
+	border-radius: 50px;
 	
 
 }
@@ -1783,18 +1783,6 @@ div.section-group    {
 .user-container .login {
   margin-bottom: 15px;
   margin-right:auto;
-}
-
-.login{
-	width: 400px;
-  padding: 1em 3em;
- margin: 1em 25%;
-}
-
-.register{
-	width: 400px;
-  padding: 1em 3em;
- margin: 1em 25%;
 }
 
 
