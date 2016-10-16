@@ -7,6 +7,8 @@ Meteor.methods({
     // deja que otros metodos del cliente empiecen a correr,
     // sin esperar a que el envío de correo electrónico para completar.
     this.unblock();
+    console.log("Enviando...");
+    console.log([to, from, subject, text]);
     //LA SIGUIENTE LINEA NO FUNCIONA EN C9
     //Email.send({      to: to,      from: from,      subject: subject,      text: text    });
   }
