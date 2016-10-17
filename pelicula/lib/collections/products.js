@@ -1,4 +1,8 @@
 Products = new Mongo.Collection("products");
+//para la busqueda
+if ( Meteor.isServer ) {
+  Products._ensureIndex({title:1, genero:1, price:1});
+}
 
 Products.byId = function(id){
   return Products.findOne({id : id});

@@ -78,7 +78,7 @@ var productSeeds = [
 
 {
 	sku: 'civil-war',
-	tipo:'películas',id: '1',
+	tipo:'peliculas',id: '1',
 	title: 'Civil War',
 	price: '852.35',
 	image: 'product-img5.jpg',
@@ -89,95 +89,106 @@ var productSeeds = [
 },
 {
 	sku: 'transformers',
-	tipo:'películas',id: '2',
+	tipo:'peliculas',id: '2',
 	title: 'Transformers',
 	image: 'product-img6.jpg',
+	genero: 'Ciencia Ficción',
 	price: '749.99'
 },
 
 {
 	sku: 'the-matrix',
-	tipo:'películas',id:'3',
+	tipo:'peliculas',id:'3',
 	title: 'The Matrix',
 	image: 'product-img3.jpg',
 	price:'839.93',
 	previous_price: '899.95',
+	genero: 'Ciencia Ficción',
 	popularity: '2'
 },
 
 {
 	sku: 'si-decido-quedarme',
-	tipo:'películas',id:'4',
+	tipo:'peliculas',id:'4',
 	title: 'Si decido quedarme',
 	image: 'product-img4.jpg',
 	price:'839.93',
 	previous_price: '899.95',
+	genero: 'Romantica',
 	popularity: '3'
 },
 
 {
 	sku: 'tmnt',
-	tipo:'películas',id:'5',
+	tipo:'peliculas',id:'5',
 	title: 'Tortugas Ninja',
 	image: 'product-img1.jpg',
+	genero: 'Acción',
 	price:'839.93'
 },
 
 {
 	sku: 'tarzan',
-	tipo:'películas',id:'6',
+	tipo:'peliculas',id:'6',
 	title:'Tarzan',
 	image:'product-img2.jpg',
 	price:'839.93',
 	previous_price: '899.95',
+	genero: 'Romantica',
 	popularity: '4'
 },
 
 {
 	sku: 'ex-machina',
-	tipo:'películas',id:'7',
+	tipo:'peliculas',id:'7',
 	title:'Ex Machina',
 	image: 'product-img7.jpg',
+	genero: 'Ciencia Ficción',
 	price: '839.93'
 },
 
 {
 	sku: 'cautivos',
-	tipo:'películas',id:'8', 
+	tipo:'peliculas',id:'8', 
 	title: 'Cautivos',
 	image: 'product-img8.jpg',
+	genero: 'Acción',
 	price: '839.93'
 },
 
 {
 	sku: 'pi',
-	tipo:'películas',id:'9',
+	tipo:'peliculas',id:'9',
 	title: 'Secret Life of Pets',
 	image:'product-img9.jpg',
+	genero: 'Animada',
 	price: '839.93'
 },
 
 {
 	sku: 'dory',
-	tipo:'películas',id:'10',
+	tipo:'peliculas',id:'10',
 	title: 'Buscando a Dory',
 	image: 'product-img10.jpg',
+	genero: 'Animada',
 	price: '839.93'
 },
 
 {
 	sku: 'star-wars',
-	tipo:'películas',id: '11',
+	tipo:'peliculas',id: '11',
 	title: 'Star Wars',
 	image:'product-img11.jpg',
+	genero: 'Acción',
 	price:'839.93'
 },
 
 {
 	sku: 'zootopia',
-	tipo:'películas',id:'12',
+	tipo:'peliculas',id:'12',
 	title: 'Zootopia',
 	image:'product-img12.jpg',
+	genero: 'Animada',
 	price:'839.93'
 }
 ];

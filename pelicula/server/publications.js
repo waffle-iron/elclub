@@ -18,21 +18,32 @@ Meteor.publish("products-by-sku", function(msku){
   return Products.find({sku : msku});
 });
 
-Meteor.publish("products",function(){
+/*Meteor.publish("products",function(){
  return Products.find({});//////////7AQJUI 
- 
-  /*var cursor = Products.findOne({}, {sort: {id: 1}});
-  console.log("_id of products " + cursor.title +": " + cursor.id);
-  return Products.find({id:{$gte:cursor.id}}, {sort:{id:1}, skip:6, limit:6});*/ //PAG hacía adelante
   
-  /*var lastSeen = null;
+});*/
 
-  var cursor = Products.find({}, {sort: {id: 1}, limit:12});
+Meteor.publish( 'products', function( header ) {
+  check( header, Match.OneOf( String, null, undefined ) );
+  console.log(header);
 
-  cursor.forEach(function (products) {
-    console.log("_id of products " + products.title + ": " + products.id);
-    lastSeen = products.id;
-  });
+  let query      = {},
+      projection = { limit: 10, sort: { title: 1 } };
 
-  return Products.find({id:{$lte:lastSeen}}, {sort:{id:-1}, skip:6, limit:6});*///Pag hacía atrás
+  if ( header ) {
+    let regex = new RegExp( header, 'i' );
+
+    query = {
+      $or: [
+        { title: regex },
+        { genero: regex },
+        { price: regex }
+      ]
+    };
+
+    projection.limit = 12;
+    
+  }
+
+  return Products.find( query, projection );
 });
