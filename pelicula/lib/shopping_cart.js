@@ -17,6 +17,9 @@ if(Meteor.isClient){
   removeFromCart = function (sku, callback) {
     Meteor.call('removeFromCart',userKey, sku, callback);
   };
+  removeAllFromCart = function (callback) {
+    Meteor.call('removeAllFromCart',userKey, callback);
+  };
   updateCart = function (sku, quantity, callback) {
     Meteor.call('updateCart', userKey, sku, quantity, callback);
   };
@@ -95,6 +98,26 @@ if(Meteor.isServer){
       var found = _.find(cart.items, function(item){
         return item.sku === sku;
       });
+
+      if(found){
+        var foundIndex = cart.items.indexOf(found);
+        cart.items.splice(foundIndex,1);
+        cart.notes.push({
+          note : sku + " removed from cart",
+          created_at : new Date()
+        });
+        Meteor.call("saveCart", cart);
+      }
+
+      return cart;
+    },
+    //removeAllFromCart
+    removeAllFromCart : function(userKey){
+      check(userKey, String);
+      var cart = Meteor.call("getCart", userKey);
+      //get the item in the cart
+
+      var found = _.find(cart.items, true );
 
       if(found){
         var foundIndex = cart.items.indexOf(found);

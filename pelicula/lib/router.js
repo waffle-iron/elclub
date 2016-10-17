@@ -10,14 +10,14 @@ Router.configure({
 
 Router.route('/cart', { name: "cartShow"});
 
-// Router.route('/datos', { name: "datos"}); <<<--- POR HACER
+Router.route('/datos', { name: "datos"});// <<<--- POR HACER
+Router.route('/terminos', { name: "terminos"});// <<<--- POR HACER
+Router.route('/privacidad', { name: "privacidad"});// <<<--- POR HACER
 
-// Router.route('/compra', { name: "compra"}); <<<--- GRACIAS POR SU COMPRA
-
+Router.route('/compra', { name: "compra"});// <<<--- DETALLES DE LA COMPRA
 
 Router.route("/", {
-	
-	
+
 		name : "home",
   
 	  waitOn : function(){
@@ -34,6 +34,7 @@ Router.route("/", {
   	},
   	
   	data : function(){
+  	 /*global Products*/
     return Products.find({} , {"sort" : ['id', 'asc']} );
   	},//*/
 	  

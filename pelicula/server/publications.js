@@ -32,7 +32,7 @@ Meteor.publish( 'products', function( header ) {
 
   if ( header ) {
     let regex = new RegExp( header, 'i' );
-
+    console.log(header);
     query = {
       $or: [
         { title: regex },
@@ -42,7 +42,7 @@ Meteor.publish( 'products', function( header ) {
     };
 
     projection.limit = 12;
-    
+    //return Products.find( query, projection );
   }
 
   return Products.find( query, projection );

@@ -1,4 +1,6 @@
-Template.cartShow.helpers({
+/*global Carts*/
+/*global userKey*/
+Template.compra.helpers({
   cart : function(){
     currentCart = Carts.getCart(userKey);
     return currentCart;
@@ -18,11 +20,11 @@ Template.cartShow.helpers({
   }
 });
 /*
-Template.cartShow.onCreated(function(){
+Template.compra.onCreated(function(){
   this.subscribe("cart");
 })
 */
-Template.cartShow.events({
+Template.compra.events({
   "click .remove-from-cart" : function(ev){
     ev.preventDefault();
     /*global removeFromCart*/

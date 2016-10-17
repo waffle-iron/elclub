@@ -1,3 +1,5 @@
+import './layout.html';
+
 Template.header.onCreated( () => {
   let template = Template.instance();
 

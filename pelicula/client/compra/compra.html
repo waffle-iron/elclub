@@ -1,4 +1,4 @@
-<template name="cartShow">
+<template name="compra">
   <div class="container" style="padding-top: 30px">
     <div class="row">
       <div class="col-xs-12">
@@ -8,7 +8,7 @@
             <div class="panel-title">
               <div class="row">
                 <div class="col-xs-6">
-                  <h5><span class="glyphicon glyphicon-shopping-cart"></span> Carrito de Compras</h5>
+                  <h5>Compra</h5>
                 </div>
               </div>
             </div>
@@ -26,12 +26,7 @@
                   <h6><strong class="bolivares">{{price}} <span class="text-muted">x</span></strong></h6>
                 </div>
                 <div class="col-xs-4">
-                  <input type="text" class="form-control input-sm item-qty" value="{{quantity}}">
-                </div>
-                <div class="col-xs-2">
-                  <a type="button" class="btn btn-link btn-xs remove-from-cart">
-                    <span class="glyphicon glyphicon-trash"> </span>
-                  </a>
+                  <h4><small>{{quantity}}</small></h4>
                 </div>
               </div>
             </div>
@@ -44,8 +39,8 @@
                 <h4 class="text-right">Total <strong class="bolivares">{{carttotal}}</strong></h4>
               </div>
               <div class="col-xs-3">
-                <a type="button" href="{{pathFor 'compra'}}" class="btn btn-success btn-block">
-                  Checkout
+                <a type="button" href="{{pathFor 'home'}}" class="btn btn-success btn-block remove-all-from-cart">
+                  ¡Comprar!
                 </a>
               </div>
             </div>

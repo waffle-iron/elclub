@@ -84,5 +84,3 @@ Template.productDetail.events({
     });
   }
 });
-
-

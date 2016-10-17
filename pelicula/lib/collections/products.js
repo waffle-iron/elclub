@@ -4,6 +4,10 @@ if ( Meteor.isServer ) {
   Products._ensureIndex({title:1, genero:1, price:1});
 }
 
+Products.reload = function(){
+  //Si producto[i].stock <= 0 entonces producto[i].remover
+}
+
 Products.byId = function(id){
   return Products.findOne({id : id});
 };
