@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/LuisAguirre027/elclub.png?label=ready&title=Ready)](https://waffle.io/LuisAguirre027/elclub)
 El Club de la Película
 Ecommerce project
 
